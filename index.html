@@ -1,0 +1,424 @@
+<?php
+     if (isset($_POST['submit'])) {
+        $name = $_REQUEST['name'];
+        $email = $_REQUEST['email'];
+        $message = $_REQUEST['message'];
+
+      // Set your email address where you want to receive emails. 
+       $to = 'mymail@gmail.com';
+       $subject = 'Contact Request From Website';
+       $headers = "From: ".$name." <".$email."> \r\n";
+       $send_email = mail($to,$subject,$message,$headers);
+
+       echo ($send_email) ? 'success' : 'error';
+
+  }?>
+  
+
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Zekini</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#7952b3">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .card-cover {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="cover.css" rel="stylesheet">
+</head>
+
+<body class="h-100 text-center text-white bg-dark">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="background-image: url('coding.jpg'); background-repeat: no-repeat;
+background-size: cover;">
+    <header class="mb-auto">
+      <div>
+        <img src="zekini.png" class="float-md-start mb-0" alt="" style="width: 11%;">
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="px-3">
+      <h1 style="font-size: 6.5rem;">Welcome to Zekini</h1>
+      <p class="lead">Custom CMS Development in several frameworks </p>
+      
+
+    </main>
+
+    <footer class="mt-auto text-white-50">
+
+    </footer>
+  </div>
+
+  <div class="bg-dark text-secondary px-4 py-5 text-center" id="services">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">We specialize in</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">creating a new product that works reliably so you can bring it to market quickly and with confidence. </p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="meeting.jpg" class="d-block mx-lg-auto img-fluid" alt="zekini" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">WE’LL HELP YOU RELEASE THE SMALLEST PRODUCT WITH THE BIGGEST VALUE. WE SPECIALIZE IN:</h1>
+        <p class="lead"></p>
+          
+            <li>MVP Development</li>
+            <li>Design Sprint</li>
+            <li>Web App development</li>
+            <li>Mobile App Development</li>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Design Sprint</h1>
+        <p class="lead">Design Sprint
+          UNCOVER THE PERFECT PROTOTYPE WITH OUR 2-WEEK PROCESS
+          Building the wrong product wastes money, frustrates stakeholders, and delays time to both market and profitability. </p>
+        
+      </div>
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="coding.png" class="d-block mx-lg-auto img-fluid" alt="zekini" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="office2.jpg" class="d-block mx-lg-auto img-fluid" alt="zekini" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Web App Development</h1>
+        <p class="lead">MAKE USERS HAPPY WITH FAST, SMOOTH SOFTWARE
+          Launch a web-based app with our team who looks at software like a product, not a project. We’ve got you covered from idea to prototype to user validation to MVP launch to feature updates and beyond. We build on Laravel most often because it helps us build quality products fast, so we can pass those savings on to you. Other skills include React, Angular, and more. When you partner with us for web development, you get business strategy, product management, skilled development, QA, and DevOps from one fully managed team.</p>
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">API Development</h1>
+        <p class="lead">INCREASE REVENUE WITH ENTERPRISE CUSTOMERS WITH AN IMPORTANT API
+          Without an API, you could be losing a lot of big-ticket enterprise customers to the competition. But your inhouse team doesn’t have time to build and manage an API, so it keeps getting pushed off. </p>
+          
+        
+      </div>
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="office3.png" class="d-block mx-lg-auto img-fluid" alt="zekini" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Technology Used</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+          style="background-image: url('twitter.png');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+
+              </li>
+              <li class="d-flex align-items-center">
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+          style="background-image: url('1631110818-logo-react-js.png');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+
+              </li>
+              <li class="d-flex align-items-center">
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+          style="background-image: url('vue.png');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+
+              </li>
+              <li class="d-flex align-items-center">
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container px-4 py-5" id="custom-cards">
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+          style="background-image: url('javascript_logo.png');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+
+              </li>
+              <li class="d-flex align-items-center">
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+          style="background-image: url('mysql.png');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+
+              </li>
+              <li class="d-flex align-items-center">
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+          style="background-image: url('php.png');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+
+              </li>
+              <li class="d-flex align-items-center">
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center" id="#contact">
+    <h1 class="mb-3">Contact Us</h1>
+  </div>
+
+  <div class="d-flex justify-content-center">
+
+    <div id="app">
+      <h4>Enter the desired task for your web app</h4>
+      <form>
+        
+       <br><br>
+        <button @click="addVisa" class="btn btn-light mb-4" type="button">Add Task</button>
+        <br>
+        <div class="previous"
+        v-for="(applicant, counter) in applicants"
+        v-bind:key="counter">
+          
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label"><span @click="deleteVisa(counter)" class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+            </svg></span></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="task" v-model="applicant.previous">
+            </div>
+          </div>
+        </div>
+      </form>
+  </div>
+</div>
+
+  <div class="d-flex justify-content-center">
+
+    
+    
+    <form class="needs-validation " novalidate="">
+      <div class="row g-3">
+        <div class="col-sm-12">
+          <label for="firstName" class="form-label">Name</label>
+          <input type="text" class="form-control ui-autocomplete-input" id="firstName" placeholder="" value="" required="" autocomplete="off">
+          <div class="invalid-feedback">
+            Valid first name is required.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control ui-autocomplete-input" id="email" placeholder="you@example.com" autocomplete="off">
+        </div>
+
+        <div class="col-12">
+          <label for="email" class="form-label">Message</label>
+          <textarea name="" id="" cols="30" rows="10" class="form-control ui-autocomplete-input"></textarea>
+        </div>
+
+      </div>
+
+
+      <hr class="my-4">
+
+      <button class="w-100 btn btn-secondary btn-md" type="submit">Send</button>
+    </form>
+
+    
+  </div>
+<hr>
+  <footer class="mt-auto text-white-50 py-4s">
+    Zekini 2022
+        </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+
+<script src="https://unpkg.com/vue@3"></script>
+
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data(){
+    return {
+       applicants:[
+       {
+      previous: '',
+      expiration:''
+       }
+     ]
+    }
+  },
+  methods : {
+    addVisa(){
+      this.applicants.push({
+        previous:'',
+        expiration: ''
+      })
+    },
+    deleteVisa(counter){
+      this.applicants.splice(counter,1);
+}
+  }
+
+  }).mount('#app')
+</script>
+</body>
+
+</html>
