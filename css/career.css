@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* container */
+.container-career {
+	width: 100%;
+	height: 100%;
+    z-index: 2;
+}
+
+.container-career h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 600;
+}
+
+.bar_tool,
+.pop_up {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* pop_up */
+.pop_up {
+    z-index: 2;
+	width: 500px;
+	height: auto;
+	background-color: white;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s;
+	box-shadow: rgba(0, 0, 0, 0.116) 0px 14px 28px,
+		rgba(0, 0, 0, 0.082) 0px 10px 10px;
+}
+.pop_up.open {
+	visibility: visible;
+	opacity: 1;
+}
+.pop_up.open .body img {
+	opacity: 1;
+	transform: translateX(0px);
+}
+
+/* subscribe_box */
+.subscribe_box {
+	padding: 32px 16px;
+	text-align: center;
+}
+
+/* head */
+.head .close {
+	padding: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	position: absolute;
+	top: 8px;
+	left: 20px;
+	cursor: pointer;
+}
+.head .close:hover {
+	color: #3362cb;
+}
+
+.body {
+	margin: 32px 0;
+}
+
+.body img {
+	width: 400px;
+	opacity: 0;
+    margin: -70px 0;
+	transition: all 1.5s ease;
+	transition-delay: 0.3s;
+	transform: translateX(50px);
+}
+

@@ -1,424 +1,1007 @@
-<?php
-     if (isset($_POST['submit'])) {
-        $name = $_REQUEST['name'];
-        $email = $_REQUEST['email'];
-        $message = $_REQUEST['message'];
-
-      // Set your email address where you want to receive emails. 
-       $to = 'mymail@gmail.com';
-       $subject = 'Contact Request From Website';
-       $headers = "From: ".$name." <".$email."> \r\n";
-       $send_email = mail($to,$subject,$message,$headers);
-
-       echo ($send_email) ? 'success' : 'error';
-
-  }?>
-  
-
-<!doctype html>
-<html lang="en" class="h-100">
-
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.88.1">
+  <meta charset="UTF-8">
   <title>Zekini</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="./images/logo-full.png"/>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'><link rel="stylesheet" href="./style.css">
+<meta name="theme-color" content="#3a9fff"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
-
-
-
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
-  <meta name="theme-color" content="#7952b3">
-
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
-    .card-cover {
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-    }
-  </style>
-
-
-  <!-- Custom styles for this template -->
-  <link href="cover.css" rel="stylesheet">
 </head>
 
-<body class="h-100 text-center text-white bg-dark">
+<body>
+<header id="hero" class="header">
+  <div class="container header__container">
+<div class="header__logo">
+  <!-- <img class="header__img" src="./images/logo-full.png">  -->
+  <h1 class="header__title">Zekini<span class="header__light">.com</span></h1></div> 
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="background-image: url('coding.jpg'); background-repeat: no-repeat;
-background-size: cover;">
-    <header class="mb-auto">
-      <div>
-        <img src="zekini.png" class="float-md-start mb-0" alt="" style="width: 11%;">
-        <nav class="nav nav-masthead justify-content-center float-md-end">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#services">Services</a>
-          <a class="nav-link" href="#contact">Contact</a>
-        </nav>
+
+  <!-- navigation -->
+
+  <div class="header__menu">
+    <nav id="navbar" class="header__nav collapse">
+      <ul class="header__elenco">
+        <li class="header__el"><a href="#" class="header__link">Home</a></li>
+        <li class="header__el"><a href="#about" class="header__link">About Us</a></li>
+        <li class="header__el"><a href="#services" class="header__link">Services</a></li>
+        <li class="header__el"><a href="#portfolio" class="header__link">Portfolio</a></li>
+        <li class="header__el"><a href="#contacts" class="header__link">Contact Us</a></li>
+        <li class="header__el header__el--blue"><a href="#careers" class="btn btn--white">Query →</a></li>
+      </ul>
+    </nav>
+  </div>
+    </div>
+</header>
+
+
+<!-- background circles -->
+
+<div class="hero sect sect--padding-top">
+  <div class="hero-overlay ">
+  <div class="circle1"><p>
+  </p></div>
+
+  <div class="circle2"><p>
+  </p></div>  
+  
+  <div class="circle3"><p>
+  </p></div>
+
+  <div class="circle4"><p>
+  </p></div>
+
+  <div class="circle5"><p>
+  </p></div>  
+  
+  <div class="circle6"><p>
+  </p></div>
+
+  <div class="circle7"><p>
+  </p></div>
+
+  <div class="circle8"><p>
+  </p></div>
+
+  <div class="circle9"><p>
+  </p></div>
+
+  <div class="circle10"><p>
+  </p></div>
+
+
+  <!-- hero section -->
+
+  <div class=" container">
+    <div class="row">
+      <div class="col-md-12">
+    <div class="site">
+      <h1 class="site__title">Finally, you can build your next big project</h1>
+      <div class="sub-text">
+        <p class="site__subtitle text"></p>
       </div>
-    </header>
+      <div class="site__box-link">
+        <a class="btn btn--width" href="">About Us</a>
+        <a class="btn btn--revert btn--width" href="">Contact</a>
+      </div>
+      <img class="site__img" src="./images/illus/Coding workshop-pana(1).png">
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 
-    <main class="px-3">
-      <h1 style="font-size: 6.5rem;">Welcome to Zekini</h1>
-      <p class="lead">Custom CMS Development in several frameworks </p>
+
+<!-- social links -->
+
+<div class="sect sect--white sect--no-padding">
+  <div class="container">
+    <div class="row row--center">
+      <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img s-l" src="https://image.ibb.co/mOtHRw/fblogo.png">
+        </a>
+      </div>
       
-
-    </main>
-
-    <footer class="mt-auto text-white-50">
-
-    </footer>
-  </div>
-
-  <div class="bg-dark text-secondary px-4 py-5 text-center" id="services">
-    <div class="py-5">
-      <h1 class="display-5 fw-bold text-white">We specialize in</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="fs-5 mb-4">creating a new product that works reliably so you can bring it to market quickly and with confidence. </p>
-        
+  <div class="col-md-3  col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img s-l" src="https://image.ibb.co/nfpXRw/twitterlogo.png">
+        </a>
       </div>
-    </div>
-  </div>
-
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="meeting.jpg" class="d-block mx-lg-auto img-fluid" alt="zekini" width="700" height="500" loading="lazy">
+      
+      
+  <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img s-l" src="https://image.ibb.co/imgOYb/googlelogo.png">
+        </a>
       </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">WE’LL HELP YOU RELEASE THE SMALLEST PRODUCT WITH THE BIGGEST VALUE. WE SPECIALIZE IN:</h1>
-        <p class="lead"></p>
+      
+  <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img s-l" src="https://image.ibb.co/ebGAeG/dribbblelogo.png">
+        </a>
+      </div>
           
-            <li>MVP Development</li>
-            <li>Design Sprint</li>
-            <li>Web App development</li>
-            <li>Mobile App Development</li>
-        
+      
+    </div>
+    <div class="row row--center">
+      <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img s-l" src="https://image.ibb.co/npV8Yb/gitlogo.png">
+        </a>
+      </div>
+      
+          <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img s-l" src="https://image.ibb.co/cGyZ6w/stacklogo.png">
+        </a>
+      </div>
+      
+      
+          <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img s-l" src="https://image.ibb.co/ij03zG/inlogo.png">
+        </a>
+      </div>
+      
+          <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img s-l" src="https://image.ibb.co/ekqdzG/codepenlogo.png">
+        </a>
       </div>
     </div>
+  </div>    
   </div>
 
 
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Design Sprint</h1>
-        <p class="lead">Design Sprint
-          UNCOVER THE PERFECT PROTOTYPE WITH OUR 2-WEEK PROCESS
-          Building the wrong product wastes money, frustrates stakeholders, and delays time to both market and profitability. </p>
-        
-      </div>
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="coding.png" class="d-block mx-lg-auto img-fluid" alt="zekini" width="700" height="500" loading="lazy">
-      </div>
-    </div>
-  </div>
+<!-- about us section -->
 
-
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="office2.jpg" class="d-block mx-lg-auto img-fluid" alt="zekini" width="700" height="500" loading="lazy">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Web App Development</h1>
-        <p class="lead">MAKE USERS HAPPY WITH FAST, SMOOTH SOFTWARE
-          Launch a web-based app with our team who looks at software like a product, not a project. We’ve got you covered from idea to prototype to user validation to MVP launch to feature updates and beyond. We build on Laravel most often because it helps us build quality products fast, so we can pass those savings on to you. Other skills include React, Angular, and more. When you partner with us for web development, you get business strategy, product management, skilled development, QA, and DevOps from one fully managed team.</p>
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">API Development</h1>
-        <p class="lead">INCREASE REVENUE WITH ENTERPRISE CUSTOMERS WITH AN IMPORTANT API
-          Without an API, you could be losing a lot of big-ticket enterprise customers to the competition. But your inhouse team doesn’t have time to build and manage an API, so it keeps getting pushed off. </p>
-          
-        
-      </div>
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="office3.png" class="d-block mx-lg-auto img-fluid" alt="zekini" width="700" height="500" loading="lazy">
-      </div>
-    </div>
-  </div>
-
-
-  <div class="container px-4 py-5" id="custom-cards">
-    <h2 class="pb-2 border-bottom">Technology Used</h2>
-
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-          style="background-image: url('twitter.png');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill"></use>
-                </svg>
-
-              </li>
-              <li class="d-flex align-items-center">
-
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-          style="background-image: url('1631110818-logo-react-js.png');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill"></use>
-                </svg>
-
-              </li>
-              <li class="d-flex align-items-center">
-
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-          style="background-image: url('vue.png');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill"></use>
-                </svg>
-
-              </li>
-              <li class="d-flex align-items-center">
-
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container px-4 py-5" id="custom-cards">
-
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-          style="background-image: url('javascript_logo.png');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill"></use>
-                </svg>
-
-              </li>
-              <li class="d-flex align-items-center">
-
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-          style="background-image: url('mysql.png');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill"></use>
-                </svg>
-
-              </li>
-              <li class="d-flex align-items-center">
-
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-          style="background-image: url('php.png');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h2>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill"></use>
-                </svg>
-
-              </li>
-              <li class="d-flex align-items-center">
-
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="d-flex justify-content-center" id="#contact">
-    <h1 class="mb-3">Contact Us</h1>
-  </div>
-
-  <div class="d-flex justify-content-center">
-
-    <div id="app">
-      <h4>Enter the desired task for your web app</h4>
-      <form>
-        
-       <br><br>
-        <button @click="addVisa" class="btn btn-light mb-4" type="button">Add Task</button>
-        <br>
-        <div class="previous"
-        v-for="(applicant, counter) in applicants"
-        v-bind:key="counter">
-          
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-2 col-form-label"><span @click="deleteVisa(counter)" class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-            </svg></span></label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="task" v-model="applicant.previous">
+  <div id="about" class="aboutus-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="aboutus">
+                    <h2 class="aboutus-title">About Us</h2>
+                    <p class="aboutus-text">We are a South African software development company that fearlessly pioneers leading technologies for fast impact. </p>
+                    <p class="aboutus-text">One of the top software development company to make your business more competitive. With the help of top notch developer working tirelessly to bring your online business needs to fruition.</p>
+                    <a class="aboutus-more" href="#">read more</a>
+                </div>
             </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                  <!-- space -->
+            </div>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+                <div class="feature-about">
+                    <div class="feature-box">
+                        <div class="clearfix">
+                            <div class="iconset">
+                                <span class="fas fa-code icon"></span>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Clean and Reliable Code</h4>
+                                <p>The code quality is important, as it impacts the overall software quality. And quality impacts how safe, secure, and reliable your codebase is.
+                                  High quality is critical for many development teams today. And it's especially important for those developing safety-critical systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="clearfix">
+                            <div class="iconset">
+                                <span class="glyphicon glyphicon-cloud icon"></span>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Scalable Application</h4>
+                                <p>An application to handle a growing number of users and load, without compromising on performance and causing disruptions to user experience. To put it another way, scalability reflects the ability of the software to grow or change with the user's demands.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- our development stack -->
+
+<div class="sect sect--white sect--no-padding">
+  <div class="container">
+    <div class="row row--center">
+      <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img stack" src="./images/technologies/kisspng-laravel-software-framework-web-framework-php-zend-laravel-software-framework-php-web-framework-model-5ba3437e3f0708.4472124515374263022582.png">
+        </a>
+      </div>
+      
+  <div class="col-md-3  col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img stack" src="./images/technologies/kisspng-react-javascript-angularjs-ionic-atom-5b154be6947457.3471941815281223426081.png">
+        </a>
+      </div>
+      
+      
+  <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img stack" src="./images/technologies/kisspng-node-js-angularjs-react-javascript-npm-node-js-5b28f6115bff48.9101113415294110893768.png">
+        </a>
+      </div>
+      
+  <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img stack" src="./images/technologies/wordpress-logo-transparent-20.png">
+        </a>
+      </div>      
+    
+    </div>
+  </div>    
+  </div>
+
+  
+    <!-- our services -->
+
+    <div id="services" class="about container my-5">
+      <h2 class="service-header">What Can We Do For You?</h2>
+      <h3 class="service-header row__sub">We offer a wide range of services.</h3>
+      <div class="col mx-auto">
+        <div class="col-md-6 p-4 p-sm-5 order-2 order-sm-1 mt-8" style="margin-top: 100px;">
+          <h4 class="text-uppercase" style="color: #1F4AB8; margin-top: 30px;">Mobile Development</h4>
+          <h1 class="h2 mb-4" style="font-weight: 600;">Build Your Next Great <span style="color: #1F4AB8;">App</span></h1>
+          <p class="text-secondary" style="line-height: 2; font-size: 14px;">A successful app combines three aspects in a smart way: market, user and the product itself. All these factors need to work together to give users a unique value, great usability, and good performance. Accessibility is the last but not least key feature of a successful mobile app.</p>
+          <a href="#contacts" style="background-color: #1F4AB8; width: 140px; margin-top: 12px;" class="btn px-4 py-3 text-white d-flex align-items-center justify-content-between">
+           <span>Query →</span>
+         </a>
+        </div>
+        <div class="col-md-6 p-0 text-center order-1 order-sm-2">
+           <img class="serv-img" src="./images/illus/Usability testing-pana(1).png" width="600px" alt="">
+        </div>
+
+    </div>
+</div>
+<div class="about container my-5">
+  <div class="col mx-auto">
+    <div class="col-md-6 p-0 text-center order-1 order-sm-2 m-invisible">
+      <img src="./images/illus/In no time-pana.png" width="600px" alt="">
+   </div>
+    <div class="col-md-6 p-4 p-sm-5 order-2 order-sm-1 mt-8" style="margin-top: 100px;">
+      <h4 class="text-uppercase" style="color: #1F4AB8; margin-top: 30px;">Web Development</h4>
+      <h1 class="h2 mb-4" style="font-weight: 600;">Put Your Business On The <span style="color: #1F4AB8;">Web</span></h1>
+      <p class="text-secondary" style="line-height: 2;">No single aspect of marketing is more important than a quality website, your organization’s front door. A “good” website isn’t good enough to break through and to convert users into engaged customers and brand ambassadors. What you really need is a great website.</p>
+      <a href="#contacts" style="background-color: #1F4AB8; width: 140px; margin-top: 12px;" class="btn px-4 py-3 text-white d-flex align-items-center justify-content-between">
+       <span>Query →</span>
+     </a>
+    </div>
+    <div class="col-md-6 p-0 text-center order-1 order-sm-2 m-visible">
+      <img class="serv-img" src="./images/illus/In no time-pana.png" width="600px" alt="">
+   </div>
+</div>
+</div>
+<div class="about container my-5">
+  <div class="col mx-auto">
+    <div class="col-md-6 p-4 p-sm-5 order-2 order-sm-1 mt-8" style="margin-top: 100px;">
+      <h4 class="text-uppercase" style="color: #1F4AB8; margin-top: 30px;">CMS Systems </h4>
+      <h1 class="h2 mb-4" style="font-weight: 600;">Create Your Blog With <span style="color: #1F4AB8;">Us</span></h1>
+      <p class="text-secondary" style="line-height: 2;">Most people can generally agree that a good blog is one that provides regular, relevant content. It can be informative, newsworthy, and/or entertaining, as long as it somehow enriches readers' lives.</p>
+      <a href="#contacts" style="background-color: #1F4AB8; width: 140px; margin-top: 12px;" class="btn px-4 py-3 text-white d-flex align-items-center justify-content-between">
+       <span>Query →</span>
+     </a>
+    </div>
+    <div class="col-md-6 p-0 text-center order-1 order-sm-2">
+       <img class="serv-img" src="./images/illus/Website designer-pana(1).png" width="600px" alt="">
+    </div>
+</div>
+</div>
+
+
+    <!-- more services -->
+
+<div class="sect sect1 sect--padding-bottom">
+<div class="container con1">
+<div class="row row--center">
+  <h1 class="row__title">
+    We Offer Even More Services
+  </h1>
+  <h2 class="row__sub">What fits your business the best?</h2>
+</div>
+<div class="row row--center row--margin">
+  <div class="col-md-4 col-sm-4 price-box price-box--purple">
+    <div class="price-box__wrap serv1">
+      <div class="price-box__img"></div>
+      <h1 class="price-box__title">
+        Database Administration
+      </h1>
+      <p class="price-box__feat">
+        MySQL and MariaDB database setup with performance, integrity and security.
+      </p>
+    <div class="price-box__btn">
+      <a href="#contacts" class="btn btn--blue btn--width">Start now</a>
+    </div> 
+    
+  </div>
+  </div>
+  <!-- second -->
+  <div class="col-md-4 col-sm-4 price-box price-box--violet">
+  <div class="price-box__wrap serv2">
+      <div class="price-box__img"></div>
+      <h1 class="price-box__title">
+        System Integration
+      </h1>
+      <p class="price-box__feat">
+       Let a professional Effectively Bring together all the component sub-systems into one functional system.
+      </p>
+      <div class="price-box__btn">
+        <a href="#contacts" class="btn btn--blue btn--width">Start now</a>
+      </div> 
+  </div>
+  </div>
+
+  <div class="col-md-4 col-sm-4 price-box price-box--blue">
+  <div class="price-box__wrap serv3">
+      <div class="price-box__img"></div>
+      <h1 class="price-box__title">
+        E-commerce
+      </h1>
+      <p class="price-box__feat">
+        Buying or selling of products on online services or over the Internet. Build your online store today.
+      </p>
+      <div class="price-box__btn">
+        <a href="#contacts" class="btn btn--blue btn--width">Start now</a>
+      </div> 
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- our clients -->
+
+<div class="sect sect--white sect--no-padding">
+  <div class="row row--center">
+  </div>
+  <div class="container">
+    <div class="row row--center">
+      <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img" src="./images/technologies/twitter.png">
+        </a>
+      </div>
+      
+  <div class="col-md-3  col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img" src="./images/technologies/vue.png">
+        </a>
+      </div>
+      
+      
+  <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img" src="./images/technologies/javascript_logo.png">
+        </a>
+      </div>
+      
+  <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img" src="./images/technologies/kisspng-php-server-side-scripting-yii-web-application-scri-5b00d886973341.1462073915267820866193.png">
+        </a>
+      </div>
+          
+      
+    </div>
+    <!-- <div class="row row--center">
+      <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img" src="https://image.ibb.co/npV8Yb/gitlogo.png">
+        </a>
+      </div>
+      
+          <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img" src="https://image.ibb.co/cGyZ6w/stacklogo.png">
+        </a>
+      </div>
+      
+      
+          <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img" src="https://image.ibb.co/ij03zG/inlogo.png">
+        </a>
+      </div>
+      
+          <div class="col-md-3 col-xs-6 col-sm-6 partner">
+        <a href="#" class="partner__link">
+        <img class="partner_img" src="https://image.ibb.co/ekqdzG/codepenlogo.png">
+        </a>
+      </div>
+    </div> -->
+  </div>    
+  </div>
+
+
+<!-- our portfolio -->
+<section id="portfolio" class="portfolio-section">
+  <div class="row row--center">
+    <h1 class="row__title">
+      Our Portfolio
+    </h1>
+    <h2 class="row__sub">Take a peek into our work</h2>
+  </div>
+  <div class="container">
+<!--         <h2 class="title">Portfolio</h2> -->
+    <span class="hr-role"></span>
+    <!-- <div class="portfolio-tab">
+      <ul id="filters" class="clearfix">
+          <li class="filter active" data-filter=".snippet, .design, .full-project">all</li>
+          <li class="filter" data-filter=".snippet">Snippets</li>
+          <li class="filter" data-filter=".design">Design</li>
+          <li class="filter" data-filter=".full-project">Full Project</li>
+      </ul>
+    </div> -->
+    <div class="portfolio-grid">
+      <div class="portfolio snippet" data-cat="snippet">
+        <div class="portfolio-wrapper first">
+          <div class="portfolio-bg"></div>
+          <div class="label">
+            <div class="label-text">
+              <h4>Project Name</h4>
+              <span class="text-category">Snippet</span>
+              <a href="#" class="template-btn" target="_blank">View</a>
+            </div>
+            <div class="label-bg"> </div>
           </div>
         </div>
-      </form>
+      </div>
+      <div class="portfolio design" data-cat="design">
+        <div class="portfolio-wrapper second">
+          <div class="portfolio-bg"></div>
+          <div class="label">
+            <div class="label-text">
+              <h4>Project Name</h4>
+              <span class="text-category">Design</span>
+              <a href="#" class="template-btn" target="_blank">View</a>
+            </div>
+            <div class="label-bg"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio full-project" data-cat="full-project">
+        <div class="portfolio-wrapper third">
+          <div class="portfolio-bg"></div>
+          <div class="label">
+            <div class="label-text">
+              <h4>Project Name</h4>
+              <span class="text-category">Full Project</span>
+              <a href="#" class="template-btn" target="_blank">View</a>
+            </div>
+            <div class="label-bg"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio design" data-cat="design">
+        <div class="portfolio-wrapper second">
+          <div class="portfolio-bg"></div>
+          <div class="label">
+            <div class="label-text">
+              <h4>Project Name</h4>
+              <span class="text-category">Design</span>
+              <a href="#" class="template-btn" target="_blank">View</a>
+            </div>
+            <div class="label-bg"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio full-project" data-cat="full-project">
+        <div class="portfolio-wrapper third">
+          <div class="portfolio-bg"></div>
+          <div class="label">
+            <div class="label-text">
+              <h4>Project Name</h4>
+              <span class="text-category">Full Project</span>
+              <a href="#" class="template-btn" target="_blank">View</a>
+            </div>
+            <div class="label-bg"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio snippet" data-cat="snippet">
+        <div class="portfolio-wrapper first">
+          <div class="portfolio-bg"></div>
+          <div class="label">
+            <div class="label-text">
+              <h4>Project Name</h4>
+              <span class="text-category">Snippet</span>
+              <a href="#" class="template-btn" target="_blank">View</a>
+            </div>
+            <div class="label-bg"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- testimonials -->
+
+<div class="sect sect--white">
+  <div class="container">
+  <div class="row">
+    <h1 class="row__title">
+      Success Stories
+    </h1>
+    <h2 class="row__sub">Companies you <span class="row__sub--light">(will)</span> propably know</h2>
+  </div>
+  <div class="row row--margin row--text-center">
+    <div class="col-md-8 col-sm-10 col-xs-12 row__carousel">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+  
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="item__content">
+        <img class="item__img" src="./images/logos/01_S_Letter.jpg" alt="Slack"><span class="item__name">supreme</span>
+        <p class="item__description">
+          Customer service is amazing... now I have have a fully functioning Laravel web application it was one of my dreams to own a SASS company and there is no one who would have executed it better than Zekini. User experience is amazing... nice working with you guys.
+        </p>
+          </div>
+        <div class="item__avatar1"></div>
+        <p class="item__people">Andrew Palmer</p>
+    <p class="item__occupation">Ceo of Supreme</p>
+      </div>
+      
+          <div class="item">
+        <div class="item__content">
+        <img class="item__img" src="./images/logos/OE60X00.jpg" alt="Google"><span class="item__name">onconnect</span>
+        <p class="item__description">
+           Its been years, we still love your service! <br>
+           Very reliable people, top notch customer care and even more, high end Developers.
+        </p>
+          </div>
+        <div class="item__avatar2"></div>
+       <p class="item__people">roslina Matheba</p>
+    <p class="item__occupation">PR of Onconnect</a>
+      </div>
+      
+  <div class="item">
+        <div class="item__content">
+        <img class="item__img" src="./images/logos/preview.jpg" alt="Stackoverflow"><span class="item__name">smart</span>
+        <p class="item__description">
+            Thanks, Zekini for helping me build and maintain my React application. Its a realily big application to maintain and customize but you guys are always up for the challenge. Everytime the systems breaks you guys are always on your toes to get it running in no time. Best Service ever and scalability is your number on priority in the forever technology evolving world.
+        </p>
+          </div>
+        <div class="item__avatar3"></div>
+        <p class="item__people">Samantha Smith</p>
+    <p class="item__occupation">PA of Smart</a>
+      </div>
+  
+    </div>
+  
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+  <img class="carousel-control__img" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjQ5NCAzMS40OTQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMxLjQ5NCAzMS40OTQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPHBhdGggZD0iTTEwLjI3Myw1LjAwOWMwLjQ0NC0wLjQ0NCwxLjE0My0wLjQ0NCwxLjU4NywwYzAuNDI5LDAuNDI5LDAuNDI5LDEuMTQzLDAsMS41NzFsLTguMDQ3LDguMDQ3aDI2LjU1NCAgYzAuNjE5LDAsMS4xMjcsMC40OTIsMS4xMjcsMS4xMTFjMCwwLjYxOS0wLjUwOCwxLjEyNy0xLjEyNywxLjEyN0gzLjgxM2w4LjA0Nyw4LjAzMmMwLjQyOSwwLjQ0NCwwLjQyOSwxLjE1OSwwLDEuNTg3ICBjLTAuNDQ0LDAuNDQ0LTEuMTQzLDAuNDQ0LTEuNTg3LDBsLTkuOTUyLTkuOTUyYy0wLjQyOS0wLjQyOS0wLjQyOS0xLjE0MywwLTEuNTcxTDEwLjI3Myw1LjAwOXoiIGZpbGw9IiM2Zjc5ZmYiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+  
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <img class="carousel-control__img" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxLjQ5IDMxLjQ5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMS40OSAzMS40OTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiPgo8cGF0aCBkPSJNMjEuMjA1LDUuMDA3Yy0wLjQyOS0wLjQ0NC0xLjE0My0wLjQ0NC0xLjU4NywwYy0wLjQyOSwwLjQyOS0wLjQyOSwxLjE0MywwLDEuNTcxbDguMDQ3LDguMDQ3SDEuMTExICBDMC40OTIsMTQuNjI2LDAsMTUuMTE4LDAsMTUuNzM3YzAsMC42MTksMC40OTIsMS4xMjcsMS4xMTEsMS4xMjdoMjYuNTU0bC04LjA0Nyw4LjAzMmMtMC40MjksMC40NDQtMC40MjksMS4xNTksMCwxLjU4NyAgYzAuNDQ0LDAuNDQ0LDEuMTU5LDAuNDQ0LDEuNTg3LDBsOS45NTItOS45NTJjMC40NDQtMC40MjksMC40NDQtMS4xNDMsMC0xLjU3MUwyMS4yMDUsNS4wMDd6IiBmaWxsPSIjNmY3OWZmIi8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+   
+    </a>
+  </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- graph -->
+
+<section class="graph">
+  <svg width="200" height="200">
+    <text class="title" x="50%" y="50%" class="small" text-anchor="middle">75%</text>
+    <text class="content" x="50%" y="57%" class="small" text-anchor="middle">Websites using PHP </text>
+    
+    <defs>
+       <linearGradient id="MyGradient">
+            <stop offset="5%" stop-color="#36e0cd" />
+            <stop offset="90%" stop-color="#7c36e0" />
+          </linearGradient>
+    </defs>
+    
+        <circle class="background" r="60" cy="50%" cx="50%" stroke-linejoin="round"  stroke-width="15"  class="circle-progress" fill="none" ></circle>         
+        
+        <circle class="graph-color" r="70" cy="50%" cx="50%" stroke-linejoin="round"  stroke-width="15"  class="circle-progress" fill="none" ></circle>
+    
+   </svg>
+  
+  
+  <svg width="200" height="200">
+    <text class="title" x="50%" y="50%" class="small" text-anchor="middle">600,000</text>
+    <text class="content" x="50%" y="57%" class="small" text-anchor="middle">Laravel Websites</text>
+                                      
+                           <circle class="background" r="60" cy="50%" cx="50%" stroke-linejoin="round"  stroke-width="5"  class="circle-progress" fill="none" ></circle>         
+        
+        <circle class="graph-color" r="70" cy="50%" cx="50%" stroke-linejoin="round"  stroke-width="15"  class="circle-progress" fill="none" ></circle>
+    
+   </svg>
+  
+   <svg width="200" height="200">
+    <text class="title" x="50%" y="50%" class="small" text-anchor="middle">15,635,917 </text>
+    <text class="content" x="50%" y="57%" class="small" text-anchor="middle">React Applications</text>
+                                      
+                           <circle class="background" r="60" cy="50%" cx="50%" stroke-linejoin="round"  stroke-width="5"  class="circle-progress" fill="none" ></circle>         
+        
+        <circle class="graph-color" r="80" cy="50%" cx="50%" stroke-linejoin="round"  stroke-width="15"  class="circle-progress" fill="none" ></circle>
+    
+   </svg>
+  </section> 
+  
+
+
+  <!-- our articles -->
+
+<div class="sect sect--white">
+<div class="container">
+  <div class="row">
+   <h1 class="row__title">
+    Our Articles
+  </h1>
+  <h2 class="row__sub">Sneak peeks from our writings</h2>
+  </div>
+  
+  <div class="row row--margin">
+    <div class="col-md-6 article-pre__col">
+      <a target="_blank" href="https://www.wpbeginner.com/wp-tutorials/how-to-properly-add-javascripts-and-styles-in-wordpress/" class="article-pre ">
+        <div class="article-pre__img article-pre__img--first"></div>
+        <h2 class="article-pre__info">
+          <span class="article-pre__cat">CMS •</span><span class="article-pre__aut"> by Editorial Staff</span> <span class="article-pre__date"> - November 8th, 2022</span>
+        </h2>
+        <h1 class="article-pre__title">How to Properly Add JavaScripts and Styles in WordPress<span class="article-pre__arrow--purple"> →</span></h1>
+      </a>
+    </div>
+    
+        <div class="col-md-6 article-pre__col">
+      <a target="_blank" href="https://www.mavencluster.com/blog/reasons-to-choose-laravel-framework-for-app/" class="article-pre ">
+        <div class="article-pre__img article-pre__img--second"></div>
+        <h2 class="article-pre__info">
+          <span class="article-pre__cat">Development • </span><span class="article-pre__aut"> by Maven Cluster</span> <span class="article-pre__date"> - 15 mins read</span>
+        </h2>
+        <h1 class="article-pre__title">Why Laravel Framework Is The Right Backend for App Development<span class="article-pre__arrow--purple">→</span></h1>
+      </a>
+    </div>    
+ </div>
+  <div class="row">
+     <div class="col-md-6 article-pre__col">
+      <a target="_blank" href="https://speedysense.com/advantages-of-mysql-database/" class="article-pre ">
+        <div class="article-pre__img article-pre__img--fourth"></div>
+        <h2 class="article-pre__info">
+          <span class="article-pre__cat">Database • </span><span class="article-pre__aut"> by SpeedySense</span> <span class="article-pre__date"> - 20 mins read</span>
+        </h2>
+        <h1 class="article-pre__title">5 Essential Advantages of MySQL to Choose MySQL Database<span class="article-pre__arrow--purple"> →</span></h1>
+      </a>
+    </div>
+    
+        <div class="col-md-6 article-pre__col">
+      <a target="_blank" href="https://www.moveoapps.com/blog/react-native-vs-reactjs-differences-pros-and-cons/" class="article-pre ">
+        <div class="article-pre__img article-pre__img--third"></div>
+        <h2 class="article-pre__info">
+          <span class="article-pre__cat">React • </span><span class="article-pre__aut"> by Moveo</span> <span class="article-pre__date"> - 10 mins read</span>
+        </h2>
+        <h1 class="article-pre__title">React Native vs Reactjs - What's the Difference and What it means to Your Business<span class="article-pre__arrow--purple"> →</span></h1>
+      </a>
+    </div>     
+  </div>
+</div>
+</div>
+
+<!-- our team -->
+
+<section class="team" id="team">
+  <div class="container text-center">
+    <h1 class="row__title">
+      Meet Some Of Our Team
+    </h1>
+      <p>We have the best people for your next big project</p>
+      <div class="row">
+          <!-- Box-1 -->
+          <div class="col-lg-3 col-md-6">
+              <div class="box">
+                  <div class="image1 image">
+                      <div class="social-icons">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                      <div class="overlay"></div>
+                  </div>
+                  <h3>Joyce Moss</h3>
+                  <h4>Project Manager</h4>
+              </div>
+          </div>
+          <!-- Box-2 -->
+          <div class="col-lg-3 col-md-6">
+              <div class="box">
+                  <div class="image2 image">
+                      <div class="social-icons">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                      <div class="overlay"></div>
+                  </div>
+                  <h3>John Simon</h3>
+                  <h4>App Developer</h4>
+              </div>
+          </div>
+          <!-- Box-3 -->
+          <div class="col-lg-3 col-md-6">
+              <div class="box">
+                  <div class="image3 image">
+                      <div class="social-icons">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                      <div class="overlay"></div>
+                  </div>
+                  <h3>Bobby Frank</h3>
+                  <h4>Front End</h4>
+              </div>
+          </div>
+          <!-- Box-4 -->
+          <div class="col-lg-3 col-md-6">
+              <div class="box">
+                  <div class="image4  image">
+                      <div class="social-icons">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                      <div class="overlay"></div>
+                  </div>
+                  <h3>Jaden Kirby</h3>
+                  <h4>Web designer</h4>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- chatbot -->
+
+<i class="fa fa-comment-dots"></i>
+<div class="chatbot chatbot--closed">
+
+  <div class="chatbot__header">
+    <p><strong>Got a question?</strong> <span class="u-text-highlight">Ask Harry</span></p>
+    <svg class="chatbot__close-button icon-speech fa-comment-dots" viewBox="0 0 32 32">
+      <use xlink:href="#icon-speech" />
+    </svg>
+    <svg class="chatbot__close-button icon-close" viewBox="0 0 32 32">
+      <use xlink:href="#icon-close" />
+    </svg>
+  </div>
+  <div class="chatbot__message-window">
+    <ul class="chatbot__messages">
+      <li class="is-ai animation">
+        <div class="is-ai__profile-picture">
+          <svg class="icon-avatar" viewBox="0 0 32 32">
+            <use xlink:href="#avatar" />
+          </svg>
+        </div>
+        <span class="chatbot__arrow chatbot__arrow--left"></span>
+        <p class='chatbot__message'>Hi there 🖐. I’m Harry, your virtual assistant. I'm here to help with your general enquiries.</p>
+      </li>
+      <!-- Answer and response added here -->
+    </ul>
+  </div>
+  <div class="chatbot__entry chatbot--closed">
+    <input type="text" class="chatbot__input" placeholder="Write a message..." />
+    <svg class="chatbot__submit" viewBox="0 0 32 32">
+      <use xlink:href="#icon-send" />
+    </svg>
   </div>
 </div>
 
-  <div class="d-flex justify-content-center">
+<!-- Symbols -->
+<svg>
+  <!-- Close icon -->
+  <symbol id="icon-close" viewBox="0 0 32 32">
+    <title>Close</title>
+    <path d="M2.624 8.297l2.963-2.963 23.704 23.704-2.963 2.963-23.704-23.704z" />
+    <path d="M2.624 29.037l23.704-23.704 2.963 2.963-23.704 23.704-2.963-2.963z" />
+  </symbol>
 
-    
-    
-    <form class="needs-validation " novalidate="">
-      <div class="row g-3">
-        <div class="col-sm-12">
-          <label for="firstName" class="form-label">Name</label>
-          <input type="text" class="form-control ui-autocomplete-input" id="firstName" placeholder="" value="" required="" autocomplete="off">
-          <div class="invalid-feedback">
-            Valid first name is required.
-          </div>
+  <!-- Speech icon -->
+  <symbol id="icon-speech" viewBox="0 0 32 32">
+    <title>Speech</title>
+    <path d="M21.795 5.333h-11.413c-0.038 0-0.077 0-0.114 0l-0.134 0.011v2.796c0.143-0.006 0.273-0.009 0.385-0.009h11.277c0.070 0 7.074 0.213 7.074 7.695 0 5.179-2.956 7.695-9.036 7.695h-3.792c-0.691 0-1.12 0.526-1.38 1.159l-1.387 3.093-1.625 3.77 0.245 0.453h2.56l2.538-5.678h2.837c7.633 0 11.84-3.727 11.84-10.494 0.001-8.564-7.313-10.492-9.875-10.492z" />
+    <path d="M10.912 24.259c-0.242-0.442-0.703-0.737-1.234-0.737-0 0-0 0-0 0h-0.56c-0.599-0.011-1.171-0.108-1.71-0.28l0.042 0.012c-1.82-0.559-4.427-2.26-4.427-7.424 0-6.683 5.024-7.597 7.109-7.686v-2.8c-2.042 0.095-9.91 1.067-9.91 10.483 0 4.832 1.961 7.367 3.606 8.64 1.38 1.067 3.109 1.744 4.991 1.843l0.033 0.019 2.805 5.211 1.41-3.273z" />
+  </symbol>
+
+  <!-- Send icon -->
+  <symbol id="icon-send" viewBox="0 0 23.97 21.9">
+    <title>Send</title>
+    <path d="M0.31,9.43a0.5,0.5,0,0,0,0,.93l8.3,3.23L23.15,0Z"/>
+    <path d="M9,14.6H9V21.4a0.5,0.5,0,0,0,.93.25L13.22,16l6,3.32A0.5,0.5,0,0,0,20,19l4-18.4Z"/>
+  </symbol>
+  
+  <!-- Avatar icon -->
+  <symbol id="avatar" width="32" height="32" viewBox="0 0 44.25 44">
+    <title>Avatar</title>
+    <path style="fill: #407bff; fill-rule: evenodd;" d="M1035.88,1696.25a22,22,0,1,1-22.13,22A22.065,22.065,0,0,1,1035.88,1696" transform="translate(-1013.75 -1696.25)"/>
+    <path style="fill: #fff; fill-rule: evenodd;" d="M1030.18,1725.16h2.35a0.335,0.335,0,0,0,.34-0.33v-5.23h5.94v5.23a0.342,0.342,0,0,0,.34.33h2.36a0.342,0.342,0,0,0,.34-0.33v-12.36a0.34,0.34,0,0,0-.34-0.32h-2.36a0.34,0.34,0,0,0-.34.32v4.51h-5.94v-4.51a0.333,0.333,0,0,0-.34-0.32h-2.35a0.333,0.333,0,0,0-.34.32v12.36a0.335,0.335,0,0,0,.34.33" transform="translate(-1013.75 -1696.25)"/>
+  </symbol>
+  
+</svg>
+<!-- our contacts -->
+
+<div id="contacts" class="sect sect--padding-bottom">
+  <div class="container">
+    <div class="row">
+     <h1 class="row__title">
+    Contact Us </h1>
+  <h2 class="row__sub">Feel free to ask any questions</h2>
+    </div>
+    <div class="row row--margin">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <div class="contacts">
+          <a href="#" class="contacts__link">
+            <h1 class="contacts_title-ag">Zekini<span class="contacts--light">.com</span></h1></a>
+          <p class="contacts__address">
+            <br>
+            Johannesburg<br>
+            Gauteng, South Africa
+          </p>       
+           <p class="contacts__address">
+            Witbank<br>
+            Mpumalanga, South Africa
+          </p>
+          <p class="contacts__address">
+            Port Elizabeth<br>
+            Eastern Cape, South Africa
+          </p>
+          
+          <p class="contacts__info">
+            <!-- tel. <a href="#" class="contacts__info-link">+1 234 567 890</a> -->
+          </p>
+          <p class="contacts__info">
+            <a href="mailto:support@zekini.com?subject=Client Support">
+            <h4>support@zekini.com</h4>
+            </a>
+          </p>
         </div>
-
-        <div class="col-12">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control ui-autocomplete-input" id="email" placeholder="you@example.com" autocomplete="off">
-        </div>
-
-        <div class="col-12">
-          <label for="email" class="form-label">Message</label>
-          <textarea name="" id="" cols="30" rows="10" class="form-control ui-autocomplete-input"></textarea>
-        </div>
-
       </div>
-
-
-      <hr class="my-4">
-
-      <button class="w-100 btn btn-secondary btn-md" type="submit">Send</button>
-    </form>
-
-    
+      <div class="col-md-6">
+        <form id="contact" class="form">
+          <div class="form-group">
+            <select class="form__field form__select">
+              <option selected value>Choose from our options*</option>
+              <option value=1>Web Development</option>
+              <option value=2>Mobile Development</option>
+              <option value=3>CMS Systems </option>
+              <option value=4>Database Administration </option>
+              <option value=5>System Integration</option>
+              <option value=6>E-commerce</option>
+              <option value=7>Others</option>
+            </select>
+            </div>
+           <div class="form-group">
+             <div class="form__field--half">
+            <input type="text" placeholder="Name*" class="form__field form__text"></input>
+             </div>
+          <div class="form__field--half">
+          <input type="text" placeholder="Surname" class="form__field form__text"></input>
+          </div>
+          </div>
+      
+        <div class="form-group">
+          <div class="form__field--half">
+            <input type="text" placeholder="Email address*" class="form__field form__text"></input>
+          </div>
+         <div class="form__field--half">
+          <input type="text" placeholder="Phone number" class="form__field form__text"></input>
+    </div>
+          </div>
+  
+          <div class="form-group">
+            <textarea type="text" placeholder="Your messsage*" class="form__field form__textarea"></textarea>
+            <button class="btn btn--up btn--width" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>   
+<div class="col-md-1"></div>
+    </div>
   </div>
-<hr>
-  <footer class="mt-auto text-white-50 py-4s">
-    Zekini 2022
-        </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
+</div>
 
-<script src="https://unpkg.com/vue@3"></script>
+<!-- career -->
 
+<div id="careers" class="sect sect--violet ">
+  <div class="container-career">
+    <div class="pop_up">
+      <div class="profile-avt"></div>
+      <div class="subscribe_box">
+        <div class="head">
+          <span class="close">close</span>
+          <div class="row">
+            <h1 class="row__title">
+             Intern Position
+           </h1>
+           <h2 class="row__sub">We are looking for an Intern Laravel Developer</h2>
+           </div>
+        </div>
+        <div class="body">
+          <img src="./images/illus/Coworking-pana(1).png" alt="" />
+        </div>
+        <div class="foot">
+          <p>If you think, you have what it takes email us your CV at <a href="mailto:support@zekini.com?subject=Intern Laravel Developer">
+            <h4>support@zekini.com</h4>
+            </a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="https://image.ibb.co/fWyVtb/path3762.png" class="career-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="career_title">Oh! Your have digged our website in search for the new job?</h1>
+        <h1 class="career_sub">We will pleased to have you onboard! Check open positions.</h1>
+        <div class="btn btn--white btn--width career">Careers</div>
+      </div>
+    </div>
+  </div>
+  
+</div>
 
-<script>
-  const { createApp } = Vue
+ <!-- footer -->
 
-  createApp({
-    data(){
-    return {
-       applicants:[
-       {
-      previous: '',
-      expiration:''
-       }
-     ]
-    }
-  },
-  methods : {
-    addVisa(){
-      this.applicants.push({
-        previous:'',
-        expiration: ''
-      })
-    },
-    deleteVisa(counter){
-      this.applicants.splice(counter,1);
-}
-  }
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-xs-6">
+        <h1 class="footer__title">&copy;2022 Zekini<span class="footer__light">.com </span></h1></div>
+      <div class="col-md-10 col-xs-6">
+        <div class="footer__social">
+          <a href="https://twitter.com/zekinico?lang=en" class="footer__social-l">
+            <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYxMiA2MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYxMiA2MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNjEyLDExNi4yNThjLTIyLjUyNSw5Ljk4MS00Ni42OTQsMTYuNzUtNzIuMDg4LDE5Ljc3MmMyNS45MjktMTUuNTI3LDQ1Ljc3Ny00MC4xNTUsNTUuMTg0LTY5LjQxMSAgICBjLTI0LjMyMiwxNC4zNzktNTEuMTY5LDI0LjgyLTc5Ljc3NSwzMC40OGMtMjIuOTA3LTI0LjQzNy01NS40OS0zOS42NTgtOTEuNjMtMzkuNjU4Yy02OS4zMzQsMC0xMjUuNTUxLDU2LjIxNy0xMjUuNTUxLDEyNS41MTMgICAgYzAsOS44MjgsMS4xMDksMTkuNDI3LDMuMjUxLDI4LjYwNkMxOTcuMDY1LDIwNi4zMiwxMDQuNTU2LDE1Ni4zMzcsNDIuNjQxLDgwLjM4NmMtMTAuODIzLDE4LjUxLTE2Ljk4LDQwLjA3OC0xNi45OCw2My4xMDEgICAgYzAsNDMuNTU5LDIyLjE4MSw4MS45OTMsNTUuODM1LDEwNC40NzljLTIwLjU3NS0wLjY4OC0zOS45MjYtNi4zNDgtNTYuODY3LTE1Ljc1NnYxLjU2OGMwLDYwLjgwNiw0My4yOTEsMTExLjU1NCwxMDAuNjkzLDEyMy4xMDQgICAgYy0xMC41MTcsMi44My0yMS42MDcsNC4zOTgtMzMuMDgsNC4zOThjLTguMTA3LDAtMTUuOTQ3LTAuODAzLTIzLjYzNC0yLjMzM2MxNS45ODUsNDkuOTA3LDYyLjMzNiw4Ni4xOTksMTE3LjI1Myw4Ny4xOTQgICAgYy00Mi45NDcsMzMuNjU0LTk3LjA5OSw1My42NTUtMTU1LjkxNiw1My42NTVjLTEwLjEzNCwwLTIwLjExNi0wLjYxMi0yOS45NDQtMS43MjFjNTUuNTY3LDM1LjY4MSwxMjEuNTM2LDU2LjQ4NSwxOTIuNDM4LDU2LjQ4NSAgICBjMjMwLjk0OCwwLDM1Ny4xODgtMTkxLjI5MSwzNTcuMTg4LTM1Ny4xODhsLTAuNDIxLTE2LjI1M0M1NzMuODcyLDE2My41MjYsNTk1LjIxMSwxNDEuNDIyLDYxMiwxMTYuMjU4eiIgZmlsbD0iIzcyOTNiMyIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+          </a>
+          <a href="https://www.facebook.com/zekinico/" class="footer__social-l">
+            <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDk2LjEyNCA5Ni4xMjMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDk2LjEyNCA5Ni4xMjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNNzIuMDg5LDAuMDJMNTkuNjI0LDBDNDUuNjIsMCwzNi41Nyw5LjI4NSwzNi41NywyMy42NTZ2MTAuOTA3SDI0LjAzN2MtMS4wODMsMC0xLjk2LDAuODc4LTEuOTYsMS45NjF2MTUuODAzICAgYzAsMS4wODMsMC44NzgsMS45NiwxLjk2LDEuOTZoMTIuNTMzdjM5Ljg3NmMwLDEuMDgzLDAuODc3LDEuOTYsMS45NiwxLjk2aDE2LjM1MmMxLjA4MywwLDEuOTYtMC44NzgsMS45Ni0xLjk2VjU0LjI4N2gxNC42NTQgICBjMS4wODMsMCwxLjk2LTAuODc3LDEuOTYtMS45NmwwLjAwNi0xNS44MDNjMC0wLjUyLTAuMjA3LTEuMDE4LTAuNTc0LTEuMzg2Yy0wLjM2Ny0wLjM2OC0wLjg2Ny0wLjU3NS0xLjM4Ny0wLjU3NUg1Ni44NDJ2LTkuMjQ2ICAgYzAtNC40NDQsMS4wNTktNi43LDYuODQ4LTYuN2w4LjM5Ny0wLjAwM2MxLjA4MiwwLDEuOTU5LTAuODc4LDEuOTU5LTEuOTZWMS45OEM3NC4wNDYsMC44OTksNzMuMTcsMC4wMjIsNzIuMDg5LDAuMDJ6IiBmaWxsPSIjNzI5M2IzIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+          </a>
+          
+           <a href="#hero" class="footer__social-l">
+            <i class="fa fa-arrow-up"></i>
+          <!-- <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQzOC41MzMgNDM4LjUzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDM4LjUzMyA0MzguNTMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQwOS4xMzMsMTA5LjIwM2MtMTkuNjA4LTMzLjU5Mi00Ni4yMDUtNjAuMTg5LTc5Ljc5OC03OS43OTZDMjk1LjczNiw5LjgwMSwyNTkuMDU4LDAsMjE5LjI3MywwICAgYy0zOS43ODEsMC03Ni40Nyw5LjgwMS0xMTAuMDYzLDI5LjQwN2MtMzMuNTk1LDE5LjYwNC02MC4xOTIsNDYuMjAxLTc5LjgsNzkuNzk2QzkuODAxLDE0Mi44LDAsMTc5LjQ4OSwwLDIxOS4yNjcgICBjMCwzOS43OCw5LjgwNCw3Ni40NjMsMjkuNDA3LDExMC4wNjJjMTkuNjA3LDMzLjU5Miw0Ni4yMDQsNjAuMTg5LDc5Ljc5OSw3OS43OThjMzMuNTk3LDE5LjYwNSw3MC4yODMsMjkuNDA3LDExMC4wNjMsMjkuNDA3ICAgczc2LjQ3LTkuODAyLDExMC4wNjUtMjkuNDA3YzMzLjU5My0xOS42MDIsNjAuMTg5LTQ2LjIwNiw3OS43OTUtNzkuNzk4YzE5LjYwMy0zMy41OTYsMjkuNDAzLTcwLjI4NCwyOS40MDMtMTEwLjA2MiAgIEM0MzguNTMzLDE3OS40ODUsNDI4LjczMiwxNDIuNzk1LDQwOS4xMzMsMTA5LjIwM3ogTTIxOS4yNywzMS45NzdjNDcuMjAxLDAsODguNDEsMTUuNjA3LDEyMy42MjEsNDYuODJsLTMuNTY5LDQuOTkzICAgYy0xLjQyNywyLjAwMi00Ljk5Niw1Ljg1Mi0xMC43MDQsMTEuNTY1Yy01LjcwOSw1LjcwOC0xMS45NDMsMTEuMTM2LTE4LjY5OSwxNi4yNzRjLTYuNzYyLDUuMTQtMTUuOTQsMTAuOTkyLTI3LjU1NSwxNy41NTkgICBjLTExLjYxMSw2LjU2Ny0yMy45ODIsMTIuMzI4LTM3LjExNywxNy4yNzZjLTIxLjg4Ny00MC4zNTUtNDUuMjk2LTc2LjcwOS03MC4yMzEtMTA5LjA2NCAgIEMxOTAuMDU1LDMzLjc4NCwyMDQuODA1LDMxLjk3NywyMTkuMjcsMzEuOTc3eiBNNzIuNTI0LDEwMy4wNmMxOC4yNzEtMjMuMDI2LDQwLjUzNy00MC43Myw2Ni44MDYtNTMuMSAgIGMyMy42MDEsMzEuNDA1LDQ2LjgyLDY3LjM4MSw2OS42NjIsMTA3LjkyMWMtNTcuODYyLDE1LjIyNy0xMTUuNTMyLDIyLjg0MS0xNzMuMDE0LDIyLjgzOCAgIEM0Mi4wNzIsMTUxLjk4LDU0LjI1MywxMjYuMDkxLDcyLjUyNCwxMDMuMDZ6IE00NC41NCwyODYuNzk0Yy04LjM3Ni0yMS40MTItMTIuNTYzLTQzLjkyMy0xMi41NjMtNjcuNTI3ICAgYzAtMi42NjYsMC4wOTgtNC42NjUsMC4yODYtNS45OTZjNjguOTA1LDAsMTMyLjk1NS04Ljg0OCwxOTIuMTQ5LTI2LjU1M2M2LjA5MiwxMS44LDExLjEzNiwyMi4zNjQsMTUuMTMzLDMxLjY5MyAgIGMtMC43NzEsMC4zOC0xLjk5OSwwLjgwNi0zLjcxMywxLjI4M2MtMS43MTksMC40NzYtMi45NTMsMC44MDYtMy43MjEsMC45OTlsLTEwLjU2MSwzLjcxMSAgIGMtNy4yMzYsMi42NjYtMTYuNzA4LDcuMjM1LTI4LjQwOSwxMy43MDNjLTExLjcwNCw2LjQ3OC0yNC4xMjMsMTQuMTgyLTM3LjI1NywyMy4xM2MtMTMuMTM0LDguOTQ5LTI2LjY5NiwyMC43OTctNDAuNjg0LDM1LjU1MyAgIGMtMTMuOTksMTQuNzUtMjUuNzQzLDMwLjU5MS0zNS4yNiw0Ny41M0M2NC43MTMsMzI3LjM4MSw1Mi45MTQsMzA4LjIsNDQuNTQsMjg2Ljc5NHogTTIxOS4yNyw0MDYuNTYgICBjLTQ0LjU0LDAtODQuMzItMTQuMjc3LTExOS4zNDMtNDIuODI1bDQuMjgzLDMuMTQyYzYuNjYxLTE0LjY2LDE2LjQ2Mi0yOC43NDYsMjkuNDA4LTQyLjI1NyAgIGMxMi45NDQtMTMuNTExLDI1LjQxLTI0LjQxMywzNy40MDEtMzIuNjk1YzExLjk5MS04LjI3NCwyNS4wMjgtMTYuMDc3LDM5LjExNS0yMy40MTRjMTQuMDg0LTcuMzIzLDIzLjY5MS0xMS45OTEsMjguODM1LTEzLjk4MyAgIGM1LjE0LTEuOTk4LDkuMjMzLTMuNTcyLDEyLjI3OC00LjcxNmwwLjU2OC0wLjI4N2gwLjU3NWMxOC42NDcsNDguOTE2LDMxLjk3Nyw5Ni4zMTMsMzkuOTY4LDE0Mi4xODQgICBDMjY4Ljc1Niw0MDEuNjExLDI0NC4zOTcsNDA2LjU1NywyMTkuMjcsNDA2LjU2eiBNMzc2Ljg3NiwzMjAuNDc5Yy0xNC4wODYsMjEuNzk2LTMxLjY5NiwzOS44MzQtNTIuODE3LDU0LjEwNCAgIGMtNy44MS00My43NzYtMTkuOTg1LTg4LjQxNS0zNi41NDktMTMzLjkwMmMzNy44NzctNS45MDcsNzYuOC0zLjE0MiwxMTYuNzcxLDguMjc0ICAgQzQwMC4wOTIsMjc0Ljg0MSwzOTAuOTU1LDI5OC42ODcsMzc2Ljg3NiwzMjAuNDc5eiBNNDAzLjcwNiwyMTYuNjk4Yy0xLjkwMy0wLjM3OC00LjI4NS0wLjgxLTcuMTM5LTEuMjgzICAgYy0yLjg1NC0wLjQ3My02LjMzMS0xLjA0Ny0xMC40MjQtMS43MTNjLTQuMDg3LTAuNjY2LTguNjYyLTEuMjgzLTEzLjcwMi0xLjg1NWMtNS4wNDUtMC41NzEtMTAuNDIxLTEuMDkzLTE2LjEzNi0xLjU2OSAgIGMtNS43MDgtMC40NzgtMTEuOC0wLjg1NS0xOC4yNjgtMS4xNDNjLTYuNDc5LTAuMjg0LTEzLjA0Mi0wLjQyOC0xOS43MDUtMC40MjhjLTYuNjU2LDAtMTMuNjU3LDAuMTkzLTIwLjk4MSwwLjU3MSAgIGMtNy4zMjYsMC4zNzUtMTQuNDE0LDEuMDQ5LTIxLjI2NSwxLjk5OWMtMC41NzUtMC45NTMtMS4yODctMi41MjQtMi4xNDMtNC43MTRjLTAuODU1LTIuMTg3LTEuNDc5LTMuODU1LTEuODQ4LTQuOTk3ICAgYy0zLjYyMS03Ljk5NC03LjgxLTE3LjAzNi0xMi41NzMtMjcuMTIxYzEzLjEzNC01LjMzMywyNS42NTItMTEuNDY5LDM3LjU1NS0xOC40MThjMTEuODkyLTYuOTQ5LDIxLjQwMi0xMy4xMzEsMjguNTQ0LTE4LjU1NSAgIGM3LjEzOS01LjQzLDEzLjg5NS0xMS4xODgsMjAuMjctMTcuMjc3YzYuMzc5LTYuMDksMTAuNTEzLTEwLjMyMywxMi40MjMtMTIuNzAzYzEuOTA2LTIuMzg0LDMuNzEzLTQuNzE0LDUuNDI0LTYuOTk1bDAuMjg3LTAuMjg4ICAgYzI3Ljc4OCwzMy44OCw0MS45NzQsNzIuODk3LDQyLjUzOCwxMTcuMDU5TDQwMy43MDYsMjE2LjY5OHoiIGZpbGw9IiM3MjkzYjMiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" /> -->
+          </a>
+          
+          <!-- <a href="" class="footer__social-l">
+            <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQzMC4xMTcgNDMwLjExNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDMwLjExNyA0MzAuMTE3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggaWQ9IkxpbmtlZEluIiBkPSJNNDMwLjExNywyNjEuNTQzVjQyMC41NmgtOTIuMTg4VjI3Mi4xOTNjMC0zNy4yNzEtMTMuMzM0LTYyLjcwNy00Ni43MDMtNjIuNzA3ICAgYy0yNS40NzMsMC00MC42MzIsMTcuMTQyLTQ3LjMwMSwzMy43MjRjLTIuNDMyLDUuOTI4LTMuMDU4LDE0LjE3OS0zLjA1OCwyMi40NzdWNDIwLjU2aC05Mi4yMTljMCwwLDEuMjQyLTI1MS4yODUsMC0yNzcuMzJoOTIuMjEgICB2MzkuMzA5Yy0wLjE4NywwLjI5NC0wLjQzLDAuNjExLTAuNjA2LDAuODk2aDAuNjA2di0wLjg5NmMxMi4yNTEtMTguODY5LDM0LjEzLTQ1LjgyNCw4My4xMDItNDUuODI0ICAgQzM4NC42MzMsMTM2LjcyNCw0MzAuMTE3LDE3Ni4zNjEsNDMwLjExNywyNjEuNTQzeiBNNTIuMTgzLDkuNTU4QzIwLjYzNSw5LjU1OCwwLDMwLjI1MSwwLDU3LjQ2MyAgIGMwLDI2LjYxOSwyMC4wMzgsNDcuOTQsNTAuOTU5LDQ3Ljk0aDAuNjE2YzMyLjE1OSwwLDUyLjE1OS0yMS4zMTcsNTIuMTU5LTQ3Ljk0QzEwMy4xMjgsMzAuMjUxLDgzLjczNCw5LjU1OCw1Mi4xODMsOS41NTh6ICAgIE01LjQ3Nyw0MjAuNTZoOTIuMTg0di0yNzcuMzJINS40NzdWNDIwLjU2eiIgZmlsbD0iIzcyOTNiMyIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- partial -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script><script  src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js'></script><script  src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+<script src="./main.js"></script>
 
-  }).mount('#app')
-</script>
 </body>
-
 </html>
