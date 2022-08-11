@@ -12,6 +12,9 @@
 </head>
 
 <body>
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
 <header id="hero" class="header">
   <div class="container header__container">
 <div class="header__logo">
@@ -891,39 +894,39 @@
         </div>
       </div>
       <div class="col-md-6">
-        <form action="form.php" method="post" id="contact" class="form">
+        <form action="mailto:marvwk100@email.com" method="post" id="contact" class="form" enctype=”multipart/form-data”>
           <div class="form-group">
-            <select name="service" class="form__field form__select">
+            <select name="service" class="form__field form__select" required>
               <option selected value>Choose from our options*</option>
-              <option value=1>Web Development</option>
-              <option value=2>Mobile Development</option>
-              <option value=3>CMS Systems </option>
-              <option value=4>Database Administration </option>
-              <option value=5>System Integration</option>
-              <option value=6>E-commerce</option>
-              <option value=7>Others</option>
+              <option value="Web-Development">Web Development</option>
+              <option value="Mobile-Development">Mobile Development</option>
+              <option value="CMS-Systems">CMS Systems </option>
+              <option value="Database-Administration">Database Administration </option>
+              <option value="System-Integration">System Integration</option>
+              <option value="E-commerce">E-commerce</option>
+              <option value="Others">Others</option>
             </select>
             </div>
            <div class="form-group">
              <div class="form__field--half">
-            <input type="text" name="name" placeholder="Name*" class="form__field form__text"></input>
+            <input type="text" name="name" placeholder="Name*" class="form__field form__text" required></input>
              </div>
           <div class="form__field--half">
-          <input type="text" name="surname" placeholder="Surname" class="form__field form__text"></input>
+          <input type="text" name="surname" placeholder="Surname" class="form__field form__text" required></input>
           </div>
           </div>
       
         <div class="form-group">
           <div class="form__field--half">
-            <input type="text" name="email" placeholder="Email address*" class="form__field form__text"></input>
+            <input type="email" name="email" placeholder="Email address*" class="form__field form__text" required></input>
           </div>
          <div class="form__field--half">
-          <input type="text" name="phonenumber" placeholder="Phone number" class="form__field form__text"></input>
+          <input type="tel" name="phonenumber" placeholder="Phone number" class="form__field form__text" required></input>
     </div>
           </div>
   
           <div class="form-group">
-            <textarea type="text" name="message" placeholder="Your message*" class="form__field form__textarea"></textarea>
+            <textarea type="text" name="message" placeholder="Your message*" class="form__field form__textarea" required></textarea>
             <button name="submit" class="btn btn--up btn--width" type="submit">Submit</button>
           </div>
         </form>
@@ -1003,6 +1006,7 @@
   </div>
 </footer>
 <!-- partial -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script><script  src="./script.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js'></script><script  src="./script.js"></script>

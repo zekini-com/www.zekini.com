@@ -281,3 +281,11 @@ $(".career").click(function () {
 $(".pop_up .close").click(function () {
 	$(".pop_up").removeClass("open");
 });
+
+
+// preloader
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        $('body').delay(550).css({'overflow':'visible'});
+})
