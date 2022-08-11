@@ -433,10 +433,10 @@ color: #fff;
 }
 
 .price-box__btn {
-    position: absolute;
+    position: static;
     bottom: -17px;
     left: 50%;
-    margin-left: -55px;
+    margin-bottom: -60px;
 }
 
 .row__sub--light{
