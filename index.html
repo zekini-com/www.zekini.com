@@ -1,30 +1,3 @@
-<!-- <?php
-     if (isset($_POST['submit'])) {
-        $name = $_REQUEST['name'];
-        $email = $_REQUEST['email'];
-        $message = $_REQUEST['message'];
-
-      // Set your email address where you want to receive emails. 
-       $to = 'mymail@gmail.com';
-       $subject = 'Contact Request From Website';
-       $headers = "From: ".$name." <".$email."> \r\n";
-       $send_email = mail($to,$subject,$message,$headers);
-
-       echo ($send_email) ? 'success' : 'error';
-
-  }?> -->
-  
-  <!-- <?php
-    $to      = 'nobody@example.com';
-    $subject = 'the subject';
-    $message = 'hello';
-    $headers = 'From: webmaster@example.com'       . "\r\n" .
-                 'Reply-To: webmaster@example.com' . "\r\n" .
-                 'X-Mailer: PHP/' . phpversion();
-
-    mail($to, $subject, $message, $headers);
-?> -->
-
 
 <!DOCTYPE html>
 <html lang="en" >
@@ -916,9 +889,9 @@
         </div>
       </div>
       <div class="col-md-6">
-        <form id="contact" class="form">
+        <form action="form.php" method="post" id="contact" class="form">
           <div class="form-group">
-            <select class="form__field form__select">
+            <select name="service" class="form__field form__select">
               <option selected value>Choose from our options*</option>
               <option value=1>Web Development</option>
               <option value=2>Mobile Development</option>
@@ -931,25 +904,25 @@
             </div>
            <div class="form-group">
              <div class="form__field--half">
-            <input type="text" placeholder="Name*" class="form__field form__text"></input>
+            <input type="text" name="name" placeholder="Name*" class="form__field form__text"></input>
              </div>
           <div class="form__field--half">
-          <input type="text" placeholder="Surname" class="form__field form__text"></input>
+          <input type="text" name="surname" placeholder="Surname" class="form__field form__text"></input>
           </div>
           </div>
       
         <div class="form-group">
           <div class="form__field--half">
-            <input type="text" placeholder="Email address*" class="form__field form__text"></input>
+            <input type="text" name="email" placeholder="Email address*" class="form__field form__text"></input>
           </div>
          <div class="form__field--half">
-          <input type="text" placeholder="Phone number" class="form__field form__text"></input>
+          <input type="text" name="phonenumber" placeholder="Phone number" class="form__field form__text"></input>
     </div>
           </div>
   
           <div class="form-group">
-            <textarea type="text" placeholder="Your messsage*" class="form__field form__textarea"></textarea>
-            <button class="btn btn--up btn--width" type="submit">Submit</button>
+            <textarea type="text" name="message" placeholder="Your message*" class="form__field form__textarea"></textarea>
+            <button name="submit" class="btn btn--up btn--width" type="submit">Submit</button>
           </div>
         </form>
       </div>   
