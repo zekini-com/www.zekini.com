@@ -1456,6 +1456,16 @@ margin-top: 0;
 }
 .third .portfolio-bg{
   background-image: url('./images/port/da0e187f9ac09843cc9d1aacc61a9827.webp');
+
+}
+.forth .portfolio-bg{
+  background-image: url('./images/port/daffc1dfbff196e3cb78fc4205227cd9.webp');
+}
+.fifth .portfolio-bg{
+  background-image: url('./images/port/211c2d78037a0c0492f815d688ddf0c8.webp');
+}
+.sixth .portfolio-bg{
+  background-image: url('./images/port/8743a15e2818f8c36debf9dc6afa472f.webp');
   
 }
 .portfolio .label {
