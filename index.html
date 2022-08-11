@@ -1,3 +1,31 @@
+<!-- <?php
+     if (isset($_POST['submit'])) {
+        $name = $_REQUEST['name'];
+        $email = $_REQUEST['email'];
+        $message = $_REQUEST['message'];
+
+      // Set your email address where you want to receive emails. 
+       $to = 'mymail@gmail.com';
+       $subject = 'Contact Request From Website';
+       $headers = "From: ".$name." <".$email."> \r\n";
+       $send_email = mail($to,$subject,$message,$headers);
+
+       echo ($send_email) ? 'success' : 'error';
+
+  }?> -->
+  
+  <!-- <?php
+    $to      = 'nobody@example.com';
+    $subject = 'the subject';
+    $message = 'hello';
+    $headers = 'From: webmaster@example.com'       . "\r\n" .
+                 'Reply-To: webmaster@example.com' . "\r\n" .
+                 'X-Mailer: PHP/' . phpversion();
+
+    mail($to, $subject, $message, $headers);
+?> -->
+
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -313,7 +341,8 @@
 <div class="row row--center row--margin">
   <div class="col-md-4 col-sm-4 price-box price-box--purple">
     <div class="price-box__wrap serv1">
-      <div class="price-box__img"></div>
+      <!-- <div class="price-box__img"></div> -->
+      <i class="fa fa-database more-serv"></i>
       <h1 class="price-box__title">
         Database Administration
       </h1>
@@ -329,9 +358,10 @@
   <!-- second -->
   <div class="col-md-4 col-sm-4 price-box price-box--violet">
   <div class="price-box__wrap serv2">
-      <div class="price-box__img"></div>
+      <!-- <div class="price-box__img"></div> -->
+      <i class="fa fa-cubes more-serv"></i>
       <h1 class="price-box__title">
-        System Integration
+        System/API Integration
       </h1>
       <p class="price-box__feat">
        Let a professional Effectively Bring together all the component sub-systems into one functional system.
@@ -344,7 +374,8 @@
 
   <div class="col-md-4 col-sm-4 price-box price-box--blue">
   <div class="price-box__wrap serv3">
-      <div class="price-box__img"></div>
+      <!-- <div class="price-box__img"></div> -->
+      <i class="fa fa-tags more-serv"></i>
       <h1 class="price-box__title">
         E-commerce
       </h1>

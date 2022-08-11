@@ -158,6 +158,14 @@ background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
   color: #fff;
 }
 
+.more-serv{
+  color: #aec0d2; 
+  font-size: 60px; 
+  padding: 14px 0 0 0; 
+  width: 90px; 
+  height: 90px;
+}
+
 /* our services */
 
 .service-header{
