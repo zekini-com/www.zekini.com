@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
-@import url("./css/chatbot.css");
+/* @import url("./css/chatbot.css"); */
 @import url("./css/career.css");
 /*Reset*/
 html, body{
@@ -35,7 +35,7 @@ background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
 	position:absolute;
 	left:50%; /* centers the loading animation horizontally on the screen */
 	top:50%; /* centers the loading animation vertically on the screen */
-	background-image:url('./images/loader.gif'); /* path to your loading animation */
+	background-image:url('./images/loaderr.gif'); /* path to your loading animation */
 	background-repeat:no-repeat;
   background-size: cover;
 	background-position:center;
@@ -263,9 +263,18 @@ background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
 
 .row__title{
   text-align: center;
-  font-size: 26px;
+  font-size: 3rem;
   font-weight: 400;
   margin-top: 0px;
+}
+
+.bld-word{
+  font-weight: 600;
+  color: #3362cb;
+}
+
+.serv-dt-img{
+  padding-right: 8rem;
 }
 
 .row__sub{
@@ -918,6 +927,12 @@ z-index: 0;
 left: 20%;
 }
 
+@media screen and (max-width:767px){
+  #contacts {
+    margin-top: 90px;
+  }
+}
+
 /* footer */
 
 .footer{
@@ -1094,7 +1109,7 @@ vertical-align: middle;
     font-size: 16px;
    }
   .row__title {
-    font-size: 20px;
+    /* font-size: px; */
     margin-bottom: 5px;
    }
   .price-box__title {

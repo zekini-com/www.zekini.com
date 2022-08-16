@@ -55,7 +55,7 @@
 
   //chatbot
 
-  const accessToken = '3796899bd37c423bad3a21a25277bce0';
+const accessToken = '3796899bd37c423bad3a21a25277bce0';
 const baseUrl = 'https://api.api.ai/api/query?v=2015091001';
 const sessionId = '20150910';
 const loader = `<span class='loader'><span class='loader__dot'></span><span class='loader__dot'></span><span class='loader__dot'></span></span>`;
