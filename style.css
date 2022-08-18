@@ -1949,6 +1949,18 @@ svg:nth-of-type(2) .graph-color{
     .site__title{
       margin: 20px 0 0px 0;
     }
+
+    .portfolio-section{
+      margin-bottom: 50px;
+    }
+
+    .graph{
+      margin-bottom: 40px;
+    }
+
+    /* .team{
+      margin-bottom: 1px;
+    } */
   
     /* .social-link{
       font-size: 3px;
