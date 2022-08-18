@@ -218,12 +218,13 @@ background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
     width: 300px;
   }
 
+
   .price-box__wrap{
     margin: auto;
   }
 
   #services{
-    margin-top: -50px;
+    margin-top: -100px;
   }
 }
 
@@ -1952,15 +1953,15 @@ svg:nth-of-type(2) .graph-color{
 
     .portfolio-section{
       margin-bottom: 50px;
-      margin-top: -50px;
+      margin-top: -100px;
     }
 
     .graph{
       margin-bottom: 40px;
     }
 
-    .more-serv{
-      margin-bottom: -50px;
+    .mor-serv{
+      margin-bottom: -100px;
     }
 
     /* .team{
