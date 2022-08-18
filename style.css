@@ -1952,10 +1952,15 @@ svg:nth-of-type(2) .graph-color{
 
     .portfolio-section{
       margin-bottom: 50px;
+      margin-top: -50px;
     }
 
     .graph{
       margin-bottom: 40px;
+    }
+
+    .more-serv{
+      margin-bottom: -50px;
     }
 
     /* .team{
