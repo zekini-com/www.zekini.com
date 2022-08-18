@@ -221,6 +221,10 @@ background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
   .price-box__wrap{
     margin: auto;
   }
+
+  #services{
+    margin-top: -50px;
+  }
 }
 
 @media screen and (max-width:350px){
@@ -1331,7 +1335,7 @@ margin-top: 0;
 @media screen and (max-width:750px){
   .aboutus-section {
     margin-top: -200px;
-    margin-bottom: -100px;
+    margin-bottom: -180px;
   }
 
   .aboutus{
@@ -1345,10 +1349,11 @@ margin-top: 0;
   .aboutus-more {
     /* font-size: ; */
     padding: 7px 20px;
+    /* display: none; */
   }
 
   .feature-about{
-    margin-top: 25px;
+    margin-top: 10px;
   }
 
 .feature-about .feature-box .iconset::after {
