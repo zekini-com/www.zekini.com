@@ -976,6 +976,10 @@ vertical-align: middle;
     vertical-align: middle;
 }
 
+.web-illus{
+  font-size: 8px;
+}
+
 @media screen and (max-width:1024px){
   .collapse{
  display: none;
