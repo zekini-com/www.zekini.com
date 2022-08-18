@@ -1920,6 +1920,10 @@ svg:nth-of-type(2) .graph-color{
     .site__img{
         margin-bottom: -400px;
     }
+
+    .site__title{
+      margin: 20px 0 0px 0;
+    }
   
     /* .social-link{
       font-size: 3px;
