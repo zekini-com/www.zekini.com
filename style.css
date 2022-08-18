@@ -835,10 +835,11 @@ margin-bottom: 17px;
 }
 
 .contacts__address:after{
-  content: '';
+content: '';
 position: absolute;
-width: 20px;
-height: 1px;
+width: 60px;
+height: 3px;
+text-align: center;
 background-color: #8198ae;
 bottom: 0;
 left: 0;
@@ -1871,7 +1872,6 @@ svg:nth-of-type(2) .graph-color{
   display: flex;
   font-size: 5.5rem;
   color: var(--text-color);
-  z-index: 999;
   will-change: transform;
   transform-style: preserve-3d;
   transition: 0.5s ease all;
@@ -1882,7 +1882,6 @@ svg:nth-of-type(2) .graph-color{
   display: flex;
   font-size: 3rem;
   color: var(--text-color);
-  z-index: 999;
   will-change: transform;
   transform-style: preserve-3d;
   transition: 0.5s ease all;
