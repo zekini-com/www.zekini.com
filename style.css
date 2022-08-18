@@ -1715,6 +1715,18 @@ margin-top: 0;
   transform: translateY(-15px);
 }
 
+@media screen and (max-width:750px){
+  .team .box {
+    width: 80%;
+    /* height: 5rem; */
+    margin: auto;
+}
+.team .box .image{
+  height: 15em;
+}
+
+}
+
 
 /* graph */
 
