@@ -9,12 +9,16 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'><link rel="stylesheet" href="./style.css">
 <meta name="theme-color" content="#3a9fff"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
 <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">  
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
   <!-- <div id="preloader">
     <div id="status">&nbsp;</div>
   </div> -->
+  <a href="#">
+  <img class="errow-up" src="./images/186407_arrow_up_icon.png" alt="" srcset="">
+  </a>
 <header id="hero" class="header">
   <div class="container header__container">
 <div class="header__logo">
@@ -92,7 +96,7 @@
         <p class="site__subtitle text"></p>
       </div>
       <div class="site__box-link">
-        <a class="btn btn--width" href="">About Us</a>
+        <a  data-aos="fade-in" class="btn btn--width" href="">About Us</a>
         <a class="btn btn--revert btn--width" href="">Contact</a>
       </div>
       <img class="site__img m-invisible" src="./images/illus/Coding workshop-pana(1).png">
@@ -193,7 +197,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="aboutus">
+                <div class="aboutus" data-aos="fade-right">
                     <h2 class="aboutus-title">About <span class="bld-word">Us</span></h2>
                     <p class="aboutus-text">We are a South African software development company that fearlessly pioneers leading technologies for fast impact. Our stack includes Laravel, React, Angular, and more. </p>
                     <p class="aboutus-text">One of the top software development company to make your business more competitive. With the help of top notch developer working tirelessly to bring your online business needs to fruition.</p>
@@ -211,7 +215,7 @@
                             <div class="iconset">
                                 <span class="fas fa-code icon"></span>
                             </div>
-                            <div class="feature-content">
+                            <div class="feature-content" data-aos="fade-left">
                                 <h4>Clean and Reliable Code</h4>
                                 <p>The code quality is important, as it impacts the overall software quality. And quality impacts how safe, secure, and reliable your codebase is.
                                   High quality is critical for many development teams today. And it's especially important for those developing safety-critical systems.</p>
@@ -223,7 +227,7 @@
                             <div class="iconset">
                                 <span class="glyphicon glyphicon-cloud icon"></span>
                             </div>
-                            <div class="feature-content">
+                            <div class="feature-content" data-aos="fade-left">
                                 <h4>Scalable Application</h4>
                                 <p>An application to handle a growing number of users and load, without compromising on performance and causing disruptions to user experience. To put it another way, scalability reflects the ability of the software to grow or change with the user's demands.</p>
                             </div>
@@ -308,7 +312,7 @@
       <h2 class="service-header">What Can We Do For <span class="bld-word">You?</span></h2>
       <h3 class="service-header row__sub">We offer a wide range of services.</h3>
       <div class="col mx-auto">
-        <div class="col-md-6 p-4 p-sm-5 order-2 order-sm-1 mt-8" style="margin-top: 100px;">
+        <div data-aos="fade-in" class="col-md-6 p-4 p-sm-5 order-2 order-sm-1 mt-8" style="margin-top: 100px;">
           <h4 class="text-uppercase" style="color: #1F4AB8; margin-top: 30px;">Mobile Development</h4>
           <h1 class="h2 mb-4" style="font-weight: 600;">Build Your Next Great <span style="color: #1F4AB8;">App</span></h1>
           <p class="text-secondary" style="line-height: 2; font-size: 14px;">A successful app combines three aspects in a smart way: market, user and the product itself. All these factors need to work together to give users a unique value, great usability, and good performance. Accessibility is the last but not least key feature of a successful mobile app. MAKE USERS HAPPY WITH FAST, SMOOTH SOFTWARE Launch a web-based app with our team who looks at software like a product, not a project. We’ve got you covered from idea to prototype to user validation to MVP launch to feature updates and beyond.</p>
@@ -317,7 +321,7 @@
          </a>
         </div>
         <div class="col-md-6 p-0 text-center order-1 order-sm-2">
-           <img class="serv-img" src="./images/illus/Usability testing-pana(1).png" width="600px" alt="">
+           <img data-aos="fade-left" class="serv-img" src="./images/illus/Usability testing-pana(1).png" width="600px" alt="">
         </div>
 
     </div>
@@ -325,9 +329,9 @@
 <div class="about container my-5">
   <div class="col mx-auto">
     <div class="col-md-6 p-0 text-center order-1 order-sm-2 m-invisible">
-      <img src="./images/illus/In no time-pana.png" class="serv-dt-img" width="600px" alt="">
+      <img data-aos="fade-right" src="./images/illus/In no time-pana.png" class="serv-dt-img" width="600px" alt="">
    </div>
-    <div class="col-md-6 p-4 p-sm-5 order-2 order-sm-1 mt-8" style="margin-top: 100px;">
+    <div data-aos="fade-in" class="col-md-6 p-4 p-sm-5 order-2 order-sm-1 mt-8" style="margin-top: 100px;">
       <h4 class="text-uppercase" style="color: #1F4AB8; margin-top: 30px;">Web Development</h4>
       <h1 class="h2 mb-4" style="font-weight: 600;">Put Your Business On The <span style="color: #1F4AB8;">Web</span></h1>
       <p class="text-secondary" style="line-height: 2;">No single aspect of marketing is more important than a quality website, your organization’s front door. A “good” website isn’t good enough to break through and to convert users into engaged customers and brand ambassadors. What you really need is a great website. When you partner with us for web development, you get business strategy, product management, skilled development, QA, and DevOps from one fully managed team. Build your online store or SAAS company today. </p>
@@ -336,13 +340,13 @@
      </a>
     </div>
     <div class="col-md-6 p-0 text-center order-1 order-sm-2 m-visible">
-      <img class="serv-img" src="./images/illus/In no time-pana.png" width="600px" alt="">
+      <img data-aos="fade-right" class="serv-img" src="./images/illus/In no time-pana.png" width="600px" alt="">
    </div>
 </div>
 </div>
 <div class="about container my-5">
   <div class="col mx-auto">
-    <div class="col-md-6 p-4 p-sm-5 order-2 order-sm-1 mt-8" style="margin-top: 100px;">
+    <div data-aos="fade-in" class="col-md-6 p-4 p-sm-5 order-2 order-sm-1 mt-8" style="margin-top: 100px;">
       <h4 class="text-uppercase" style="color: #1F4AB8; margin-top: 30px;">CMS Systems </h4>
       <h1 class="h2 mb-4" style="font-weight: 600;">Create Your Blog With <span style="color: #1F4AB8;">Us</span></h1>
       <p class="text-secondary" style="line-height: 2;">Most people can generally agree that a good blog is one that provides regular, relevant content. It can be informative, newsworthy, and/or entertaining, as long as it somehow enriches readers' lives.</p>
@@ -351,7 +355,7 @@
      </a>
     </div>
     <div class="col-md-6 p-0 text-center order-1 order-sm-2">
-       <img class="serv-img" src="./images/illus/Website designer-pana(1).png" width="600px" alt="">
+       <img data-aos="fade-left" class="serv-img" src="./images/illus/Website designer-pana(1).png" width="600px" alt="">
     </div>
 </div>
 </div>
@@ -367,7 +371,7 @@
   </h1>
   <h2 class="row__sub">What fits your business the best?</h2>
 </div>
-<div class="row row--center row--margin">
+<div class="row row--center row--margin" data-aos="fade-up">
   <div class="col-md-4 col-sm-4 price-box price-box--purple">
     <div class="price-box__wrap serv1">
       <!-- <div class="price-box__img"></div> -->
@@ -518,7 +522,7 @@
 
 
 <!-- our portfolio -->
-<section id="portfolio" class="portfolio-section">
+<section data-aos="fade-up" id="portfolio" class="portfolio-section">
   <div class="row row--center">
     <h1 class="row__title">
       Our <span class="bld-word">Portfolio</span> 
@@ -623,7 +627,7 @@
 
   <!-- testimonials -->
 
-<div class="sect sect--white">
+<div class="sect sect--white" data-aos="fade-up">
   <div class="container">
   <div class="row">
     <h1 class="row__title">
@@ -699,7 +703,7 @@
 
   <!-- graph -->
 
-<section class="graph">
+<section class="graph" data-aos="fade-up">
   <svg width="200" height="200">
     <text class="title" x="50%" y="50%" class="small" text-anchor="middle">75%</text>
     <text class="content" x="50%" y="57%" class="small" text-anchor="middle">Websites using PHP </text>
@@ -743,7 +747,7 @@
 
   <!-- our articles -->
 
-<div class="sect sect--white">
+<div class="sect sect--white" data-aos="fade-in">
 <div class="container">
   <div class="row">
    <h1 class="row__title">
@@ -799,7 +803,7 @@
 
 <!-- our team -->
 
-<section class="team" id="team">
+<section class="team" id="team" data-aos="fade-up">
   <div class="container text-center">
     <h1 class="row__title">
       Meet Some Of Our <span class="bld-word">Team</span>
@@ -817,8 +821,9 @@
                       </div>
                       <div class="overlay"></div>
                   </div>
-                  <h3>Joyce Moss</h3>
-                  <h4>Project Manager</h4>
+                  <h3>
+                    Barbara Du Randt</h3>
+                  <h4>HR</h4>
               </div>
           </div>
           <!-- Box-2 -->
@@ -832,8 +837,8 @@
                       </div>
                       <div class="overlay"></div>
                   </div>
-                  <h3>John Simon</h3>
-                  <h4>App Developer</h4>
+                  <h3>Llewellyn Du Randt</h3>
+                  <h4>Senoir Backend Developer</h4>
               </div>
           </div>
           <!-- Box-3 -->
@@ -847,8 +852,8 @@
                       </div>
                       <div class="overlay"></div>
                   </div>
-                  <h3>Bobby Frank</h3>
-                  <h4>Front End</h4>
+                  <h3>Gabriel Malopo</h3>
+                  <h4>Frontend Developer</h4>
               </div>
           </div>
           <!-- Box-4 -->
@@ -862,8 +867,9 @@
                       </div>
                       <div class="overlay"></div>
                   </div>
-                  <h3>Jaden Kirby</h3>
-                  <h4>Web designer</h4>
+                  <h3>
+                    Keania Niate Eric</h3>
+                  <h4>Full Stack Developer</h4>
               </div>
           </div>
       </div>
@@ -978,7 +984,7 @@ Symbols
           </p>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-left">
         <form action="mailto:marvwk100@email.com" method="post" id="contact" class="form" enctype=”multipart/form-data”>
           <div class="form-group">
             <select name="service" class="form__field form__select" required>
@@ -1023,7 +1029,7 @@ Symbols
 
 <!-- career -->
 
-<div id="careers" class="sect sect--violet ">
+<div id="careers" class="sect sect--violet">
   <div class="container-career">
     <div class="pop_up">
       <div class="profile-avt"></div>
@@ -1050,7 +1056,7 @@ Symbols
   </div>
   <img src="https://image.ibb.co/fWyVtb/path3762.png" class="career-img">
   <div class="container">
-    <div class="row">
+    <div class="row" data-aos="fade-up">
       <div class="col-md-12">
         <h1 class="career_title">Oh! Your have digged our website in search for the new job?</h1>
         <h1 class="career_sub">We will pleased to have you onboard! Check open positions.</h1>
@@ -1099,6 +1105,13 @@ Symbols
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js'></script><script  src="./script.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
 <script src="./main.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
 
 </body>
 </html>
