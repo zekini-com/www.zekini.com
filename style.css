@@ -295,7 +295,8 @@ background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
 }
 
 .serv-dt-img{
-  padding-right: 8rem;
+  margin-left: -10rem;
+  padding-right: 20px;
 }
 
 .row__sub{
@@ -1750,7 +1751,7 @@ margin-top: 0;
   transform: translateY(-15px);
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width:1199px){
   .team .box {
     width: 90%;
     /* height: 5rem; */
