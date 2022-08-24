@@ -734,6 +734,7 @@ filter: drop-shadow(0px 7px 4px rgba(0,0,0,.2));
 }
 .partner_img{
   width:160px;
+  color: #455a64 ;
   opacity:0.5;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
@@ -749,6 +750,12 @@ filter: drop-shadow(0px 7px 4px rgba(0,0,0,.2));
 
   .stack{
     width: 100px;
+  }
+}
+
+@media screen and (max-width:950px){
+  .s-l{
+    display: none;
   }
 }
 
@@ -1535,10 +1542,12 @@ margin-top: 0;
   overflow:hidden;
   position: relative !important;
   cursor:pointer;
+  margin:0 8px;
+  border-radius: 10px;
 }
 .portfolio-bg {
   width: 100%;
-  height: 300px;
+  height: 280px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1763,7 +1772,6 @@ margin-top: 0;
 
 }
 
-
 /* graph */
 
 .graph{
@@ -1851,8 +1859,6 @@ svg:nth-of-type(2) .graph-color{
 
 .social {
   display: flex;
-  /* width: 100%;
-  min-height: 100vh; */
   flex-flow: column nowrap;
   justify-content: center;
   overflow: hidden;
@@ -1869,14 +1875,7 @@ svg:nth-of-type(2) .graph-color{
   color: var(--text-color);
   text-align: center;
 }
-/* .social h1 {
-  font-size: 4rem;
-  margin: 5rem 0 1rem 0;
-}
-.social h2 {
-  font-size: 2.25rem;
-  margin: 1.5rem 0 5rem 0;
-} */
+
 .social .social__media {
   display: flex;
   flex-flow: row wrap;
@@ -1927,7 +1926,7 @@ svg:nth-of-type(2) .graph-color{
 .social .social__media li a i {
   display: flex;
   font-size: 5.5rem;
-  color: var(--text-color);
+  color: #455a64;
   will-change: transform;
   transform-style: preserve-3d;
   transition: 0.5s ease all;
@@ -1995,24 +1994,150 @@ svg:nth-of-type(2) .graph-color{
       margin-bottom: -100px;
     }
 
-    /* .team{
-      margin-bottom: 1px;
-    } */
-  
-    /* .social-link{
-      font-size: 3px;
-    } */
   }
 
+  /* Our Approach */
+  .portfolio-container {
+    width: 1134px;
+    max-width: 80%;
+    margin: 0px auto;
+    padding: 1.5em;
+  }
+
+  .portfolio-container h4{
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 10px 0 5px;
+  }
+  
+  .hero--bio {
+    grid-column: 7 / span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  .basic-info {
+    font-size: 1.5rem;
+    line-height: 155%;
+    padding-block: 2em;
+  }
+  
+  
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* margin-left: 8em; */
+    gap: 40px;
+  }
+
+  .project-wrapper img{
+       width: 400px;
+  }
+  
+  .project-thumbnail {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: .2s ease;
+    transition-property: all;
+    transition-property: transform;
+  }
+  
+  .project-thumbnail:hover {
+    transform: scale(1.03);
+  }
+  
+  .project-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .project-title {
+    font-size: 1.4rem;
+    color: var(--dark-grey);
+    font-weight: bold;
+  }
+  
+  .project-description {
+    padding-block: 2em;
+    line-height: 145%;
+    max-width: 40ch;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+  }
+  
+  footer > p:hover {
+    color: var(--accent);
+  }
+
+  #two-weeks{
+    text-align: center;
+    margin: 8rem auto 4rem auto;
+  }
+  .two-weeks-head{
+    width: 50%;
+    margin: auto;
+    text-transform: capitalize;
+  }
+
+  .two-weeks-text{
+    padding-top: 2rem;
+    width: 70%;
+    margin: auto;
+  }
+
+  .two-weeks-img{
+    width: 75%;
+    transition: .2s ease;
+    transition-property: all;
+    transition-property: transform;
+}
+
+.two-weeks-img:hover {
+  transform: scale(1.01);
+}
+
+  @media screen and (max-width:750px){
+    .project-wrapper {
+      display: block;
+      /* grid-template-columns: 1fr; */
+      /* margin-left: 8em; */
+    }
+
+    .project-wrapper img{
+      width: 80%;
+      margin: 2rem 0;
+ }
 
 
+    .two-weeks-img{
+      width: 100%;
+  }
+  }
 
-
-
-
-
-
-
+  @media screen and (max-width:1000px){
+    .two-weeks-head{
+      width: 100%;
+      margin: auto;
+      text-transform: capitalize;
+    }
+  
+    .two-weeks-text{
+      padding-top: 2rem;
+      width: 100%;
+      margin: auto;
+    }
+  }
 
 
 
