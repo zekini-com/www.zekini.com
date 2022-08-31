@@ -565,7 +565,7 @@ font-weight: 700;
 .item__avatar1{
 height: 45px;
 width: 45px;
-background-image: url("./images/people/pexels-chloe-1043474.jpg");
+background-image: url("./images/2697cb22-956d-421c-b309-ecc158d26489.__CR19\,0\,396\,396_PT0_SX300_V1___.jpg");
 background-size: cover;
 border-radius: 50%;
 margin: 50px auto 15px auto;
@@ -634,6 +634,7 @@ filter: drop-shadow(0px 7px 4px rgba(0,0,0,.2));
 
 .site{
   text-align: center;
+  z-index: 0;
 }
 .site__title{
     font-size: 30px;
@@ -661,18 +662,20 @@ filter: drop-shadow(0px 7px 4px rgba(0,0,0,.2));
 
 .site__img{
   margin-top: -12%;
+  /* padding-top: -12%; */
   margin-bottom: -150px;
   /* display: inline-block; */
   width: 80%;
-  z-index: 0;
+  z-index: 0 !important;
 }
 .site__box-link .btn--revert{
   margin-left: 15px;
+  z-index: 2;
 }
 
 .site__box-link {
   display: inline-block;
-  z-index: 1;
+  z-index: 999 !important;
 }
 
 /*menu header*/
@@ -1231,6 +1234,10 @@ margin-top: 0;
 
 /* Technologies */
 
+.m-stack{
+  font-size: 50px;
+}
+
 .technologies{
   padding: 20px 0;
   text-align: center;
@@ -1270,6 +1277,7 @@ margin-top: 0;
 /* about us */
 
 .aboutus-section {
+  /* margin-left: 100px; */
   padding: 90px 0;
   margin-top: -50px;
 }
@@ -1550,7 +1558,7 @@ margin-top: 0;
   height: 280px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   transition: 1s;
   transform: scale(1)
 }
@@ -1558,24 +1566,24 @@ margin-top: 0;
   transform: scale(1.2)
 }
 .first .portfolio-bg{
-  background-image: url('./images/port/3d-hero-illustration-design-trends.webp');
+  background-image: url('./images/port/Screenshot\ from\ 2022-08-30\ 14-09-31.png');
   
 }
 .second .portfolio-bg{
-  background-image: url('./images/port/b65dd6fa08552825648bc96621973810.webp');
+  background-image: url('./images/port/Screenshot\ from\ 2022-08-30\ 14-11-55.png');
 }
 .third .portfolio-bg{
-  background-image: url('./images/port/da0e187f9ac09843cc9d1aacc61a9827.webp');
+  background-image: url('./images/port/Screenshot\ from\ 2022-08-30\ 14-17-43.png');
 
 }
 .forth .portfolio-bg{
-  background-image: url('./images/port/daffc1dfbff196e3cb78fc4205227cd9.webp');
+  background-image: url('./images/port/Screenshot\ from\ 2022-08-31\ 12-52-13.png');
 }
 .fifth .portfolio-bg{
-  background-image: url('./images/port/211c2d78037a0c0492f815d688ddf0c8.webp');
+  background-image: url('./images/port/Screenshot\ from\ 2022-08-31\ 13-03-20.png');
 }
 .sixth .portfolio-bg{
-  background-image: url('./images/port/8743a15e2818f8c36debf9dc6afa472f.webp');
+  background-image: url('./images/port/Screenshot\ from\ 2022-08-31\ 13-03-28.png');
   
 }
 .portfolio .label {
@@ -1654,7 +1662,7 @@ margin-top: 0;
 .team .box .image1 {
   position: relative;
   height: 25em;
-  background-image: url('./images/people/avator/4202846.png');
+  background-image: url('./images/people/avator/3976699.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1768,6 +1776,7 @@ margin-top: 0;
 }
 .team .box .image{
   height: 15em;
+  background-size: contain;
 }
 
 }
