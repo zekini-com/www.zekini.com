@@ -53,6 +53,15 @@
     filterList.init();
   });	
 
+  // career
+
+$(".career").click(function () {
+	$(".pop_up").addClass("open");
+});
+$(".pop_up .close").click(function () {
+	$(".pop_up").removeClass("open");
+});
+
   //chatbot
 
 const accessToken = '3796899bd37c423bad3a21a25277bce0';
@@ -272,15 +281,6 @@ const send = (text = '') => {
 
   aiMessage(loader, true, botLoadingDelay);
 };
-
-// career
-
-$(".career").click(function () {
-	$(".pop_up").addClass("open");
-});
-$(".pop_up .close").click(function () {
-	$(".pop_up").removeClass("open");
-});
 
 
 // preloader
