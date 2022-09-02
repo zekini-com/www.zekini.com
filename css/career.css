@@ -67,11 +67,18 @@
 }
 
 .body img {
-	width: 400px;
+	width: 200px;
 	opacity: 0;
-    margin: -70px 0;
+    margin: -10px 0;
+    /* margin: -70px 0; */
 	transition: all 1.5s ease;
 	transition-delay: 0.3s;
 	transform: translateX(50px);
+}
+
+@media screen and (max-width:500px){
+	.pop_up {
+		width: 80%;
+	}
 }
 
