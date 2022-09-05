@@ -8,7 +8,7 @@
         $message = $_REQUEST['message'];
 
       // Set your email address where you want to receive emails. 
-       $to = 'gabriel@zekini.com';
+       $to = 'marvin@zekini.com';
        $subject = 'Contact Request From Website';
        $headers = "From: ".$name."<".$email."> \r\n Service: ".$service."Phone number:".$phonenumber;
        $send_email = mail($to,$subject,$message,$headers);
