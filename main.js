@@ -62,117 +62,155 @@ $(".pop_up .close").click(function () {
 	$(".pop_up").removeClass("open");
 });
 
+$('.form').submit(function(event) {
+  event.preventDefault();
+  $('.form').addClass('visibility-os');
+  $('.success').addClass('success-v');
+
+});
+
+const titles = document.querySelectorAll('.container-arti .title');
+const links = document.querySelectorAll('#links a');
+
+const observer = new IntersectionObserver(
+  (items) => {
+    items.forEach((item) => {
+      if (item.isIntersecting) {
+        const id = `#${item.target.id}`;
+        history.pushState({}, item.target.innetText, id);
+
+        links.forEach((link) => {
+          link.classList.remove('active');
+
+          const href = link.attributes.href.nodeValue;
+          if (href === id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  },
+  {
+    threshold: 1,
+    rootMargin: '0px 0px -50% 0px',
+  }
+);
+
+titles.forEach((title) => {
+  observer.observe(title);
+});
+
   //chatbot
 
-const accessToken = '3796899bd37c423bad3a21a25277bce0';
-const baseUrl = 'https://api.api.ai/api/query?v=2015091001';
-const sessionId = '20150910';
-const loader = `<span class='loader'><span class='loader__dot'></span><span class='loader__dot'></span><span class='loader__dot'></span></span>`;
-const errorMessage = 'My apologies, I\'m not available at the moment, however, feel free to email our support team directly <a href="mailto:support@zekini.com?subject=Client Support">support@zekini.com.</a>';
-const urlPattern = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
-const $document = document;
-const $chatbot = $document.querySelector('.chatbot');
-const $chatbotMessageWindow = $document.querySelector('.chatbot__message-window');
-const $chatbotHeader = $document.querySelector('.fa-comment-dots');
-const $chatclose = $document.querySelector('.icon-close');
-const $chatbotMessages = $document.querySelector('.chatbot__messages');
-const $chatbotInput = $document.querySelector('.chatbot__input');
-const $chatbotSubmit = $document.querySelector('.chatbot__submit');
+// const accessToken = '3796899bd37c423bad3a21a25277bce0';
+// const baseUrl = 'https://api.api.ai/api/query?v=2015091001';
+// const sessionId = '20150910';
+// const loader = `<span class='loader'><span class='loader__dot'></span><span class='loader__dot'></span><span class='loader__dot'></span></span>`;
+// const errorMessage = 'My apologies, I\'m not available at the moment, however, feel free to email our support team directly <a href="mailto:support@zekini.com?subject=Client Support">support@zekini.com.</a>';
+// const urlPattern = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
+// const $document = document;
+// const $chatbot = $document.querySelector('.chatbot');
+// const $chatbotMessageWindow = $document.querySelector('.chatbot__message-window');
+// const $chatbotHeader = $document.querySelector('.fa-comment-dots');
+// const $chatclose = $document.querySelector('.icon-close');
+// const $chatbotMessages = $document.querySelector('.chatbot__messages');
+// const $chatbotInput = $document.querySelector('.chatbot__input');
+// const $chatbotSubmit = $document.querySelector('.chatbot__submit');
 
-const botLoadingDelay = 1000;
-const botReplyDelay = 2000;
+// const botLoadingDelay = 1000;
+// const botReplyDelay = 2000;
 
-document.addEventListener('keypress', event => {
-  if (event.which == 13) validateMessage();
-}, false);
+// document.addEventListener('keypress', event => {
+//   if (event.which == 13) validateMessage();
+// }, false);
 
-$chatbotHeader.addEventListener('click', () => {
-  toggle($chatbot, 'chatbot--closed');
-  $chatbotInput.focus();
-}, false);
+// $chatbotHeader.addEventListener('click', () => {
+//   toggle($chatbot, 'chatbot--closed');
+//   $chatbotInput.focus();
+// }, false);
 
-$chatclose.addEventListener('click', () => {
-  toggle($chatbot, 'chatbot--closed');
-  $chatbotInput.focus();
-}, false);
+// $chatclose.addEventListener('click', () => {
+//   toggle($chatbot, 'chatbot--closed');
+//   $chatbotInput.focus();
+// }, false);
 
-$chatbotSubmit.addEventListener('click', () => {
-  validateMessage();
-}, false);
+// $chatbotSubmit.addEventListener('click', () => {
+//   validateMessage();
+// }, false);
 
-const toggle = (element, klass) => {
-  const classes = element.className.match(/\S+/g) || [],
-  index = classes.indexOf(klass);
-  index >= 0 ? classes.splice(index, 1) : classes.push(klass);
-  element.className = classes.join(' ');
-};
+// const toggle = (element, klass) => {
+//   const classes = element.className.match(/\S+/g) || [],
+//   index = classes.indexOf(klass);
+//   index >= 0 ? classes.splice(index, 1) : classes.push(klass);
+//   element.className = classes.join(' ');
+// };
 
-const userMessage = content => {
-  $chatbotMessages.innerHTML += `<li class='is-user animation'>
-      <p class='chatbot__message'>
-        ${content}
-      </p>
-      <span class='chatbot__arrow chatbot__arrow--right'></span>
-    </li>`;
-};
+// const userMessage = content => {
+//   $chatbotMessages.innerHTML += `<li class='is-user animation'>
+//       <p class='chatbot__message'>
+//         ${content}
+//       </p>
+//       <span class='chatbot__arrow chatbot__arrow--right'></span>
+//     </li>`;
+// };
 
-const aiMessage = (content, isLoading = false, delay = 0) => {
-  setTimeout(() => {
-    removeLoader();
-    $chatbotMessages.innerHTML += `<li 
-      class='is-ai animation' 
-      id='${isLoading ? "is-loading" : ""}'>
-        <div class="is-ai__profile-picture">
-          <svg class="icon-avatar" viewBox="0 0 32 32">
-            <use xlink:href="#avatar" />
-          </svg>
-        </div>
-        <span class='chatbot__arrow chatbot__arrow--left'></span>
-        <div class='chatbot__message'>${content}</div>
-      </li>`;
-    scrollDown();
-  }, delay);
-};
+// const aiMessage = (content, isLoading = false, delay = 0) => {
+//   setTimeout(() => {
+//     removeLoader();
+//     $chatbotMessages.innerHTML += `<li 
+//       class='is-ai animation' 
+//       id='${isLoading ? "is-loading" : ""}'>
+//         <div class="is-ai__profile-picture">
+//           <svg class="icon-avatar" viewBox="0 0 32 32">
+//             <use xlink:href="#avatar" />
+//           </svg>
+//         </div>
+//         <span class='chatbot__arrow chatbot__arrow--left'></span>
+//         <div class='chatbot__message'>${content}</div>
+//       </li>`;
+//     scrollDown();
+//   }, delay);
+// };
 
-const removeLoader = () => {
-  let loadingElem = document.getElementById('is-loading');
-  if (loadingElem) $chatbotMessages.removeChild(loadingElem);
-};
+// const removeLoader = () => {
+//   let loadingElem = document.getElementById('is-loading');
+//   if (loadingElem) $chatbotMessages.removeChild(loadingElem);
+// };
 
-const escapeScript = unsafe => {
-  const safeString = unsafe.
-  replace(/</g, ' ').
-  replace(/>/g, ' ').
-  replace(/&/g, ' ').
-  replace(/"/g, ' ').
-  replace(/\\/, ' ').
-  replace(/\s+/g, ' ');
-  return safeString.trim();
-};
+// const escapeScript = unsafe => {
+//   const safeString = unsafe.
+//   replace(/</g, ' ').
+//   replace(/>/g, ' ').
+//   replace(/&/g, ' ').
+//   replace(/"/g, ' ').
+//   replace(/\\/, ' ').
+//   replace(/\s+/g, ' ');
+//   return safeString.trim();
+// };
 
-const linkify = inputText => {
-  return inputText.replace(urlPattern, `<a href='$1' target='_blank'>$1</a>`);
-};
+// const linkify = inputText => {
+//   return inputText.replace(urlPattern, `<a href='$1' target='_blank'>$1</a>`);
+// };
 
-const validateMessage = () => {
-  const text = $chatbotInput.value;
-  const safeText = text ? escapeScript(text) : '';
-  if (safeText.length && safeText !== ' ') {
-    resetInputField();
-    userMessage(safeText);
-    send(safeText);
-  }
-  scrollDown();
-  return;
-};
+// const validateMessage = () => {
+//   const text = $chatbotInput.value;
+//   const safeText = text ? escapeScript(text) : '';
+//   if (safeText.length && safeText !== ' ') {
+//     resetInputField();
+//     userMessage(safeText);
+//     send(safeText);
+//   }
+//   scrollDown();
+//   return;
+// };
 
-const multiChoiceAnswer = text => {
-  const decodedText = text.replace(/zzz/g, "'");
-  userMessage(decodedText);
-  send(decodedText);
-  scrollDown();
-  return;
-};
+// const multiChoiceAnswer = text => {
+//   const decodedText = text.replace(/zzz/g, "'");
+//   userMessage(decodedText);
+//   send(decodedText);
+//   scrollDown();
+//   return;
+// };
 
 const processResponse = val => {
   if (val && val.fulfillment) {

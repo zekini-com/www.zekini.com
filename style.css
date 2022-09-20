@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 /* @import url("./css/chatbot.css"); */
 @import url("./css/career.css");
+@import url("./css/article.css");
 /*Reset*/
 html, body{
   overflow-x: hidden;
@@ -661,7 +662,7 @@ filter: drop-shadow(0px 7px 4px rgba(0,0,0,.2));
 }
 
 .site__img{
-  margin-top: -12%;
+  margin-top: 2%;
   /* padding-top: -12%; */
   margin-bottom: -150px;
   /* display: inline-block; */
@@ -793,7 +794,7 @@ filter: drop-shadow(0px 7px 4px rgba(0,0,0,.2));
 }
 
 .article-pre__img--first{
-   background-image: url('./images/articles/addscriptstyles.png');
+   background-image: url('./images/logos/xdebug-php-debugging-featured-img.jpg.webp');
 }
 
 .article-pre__img--second{
@@ -2148,9 +2149,35 @@ svg:nth-of-type(2) .graph-color{
     }
   }
 
+  .visibility-os{
+    display: none;
+    transition: all 0.5s;
+  }
 
+  .success{
+    display: none;
+    transition: all 1s;
+  }
 
+  .success-v{
+    display: unset;
+    transition: all 1s;
+  }
 
+  .success-v p{
+    transform: translateX(0px);
+  }
+
+  .form-success-text{
+     background-color: rgb(179, 250, 179);
+     padding: 8px;
+     font-size: 18px;
+     position: relative;
+  }
+
+.debug-img{
+  width: 100%;
+}
 
 
 
