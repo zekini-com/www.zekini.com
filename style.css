@@ -2,6 +2,7 @@
 /* @import url("./css/chatbot.css"); */
 @import url("./css/career.css");
 @import url("./css/article.css");
+@import url("./css/tut.css");
 /*Reset*/
 html, body{
   overflow-x: hidden;
@@ -2180,4 +2181,40 @@ svg:nth-of-type(2) .graph-color{
 }
 
 
+/* tutorial */
 
+/* .codepen-info {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  margin-top: 40px;
+  background: #f4f4f4;
+  margin-bottom: -100px;
+}
+.codepen-info h1 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+}
+.codepen-info p {
+  color: #777;
+  font-size: 16px;
+}
+.codepen-info .src {
+  padding: 15px;
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.codepen-info .src p.coded {
+  padding-left: 15px;
+  background: #f1f1f1;
+  color: black;
+}
+
+.tut-image{
+  width: 100%;
+  height: 50px;
+} */

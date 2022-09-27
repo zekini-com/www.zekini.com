@@ -11,8 +11,9 @@
        $to = 'marvin@zekini.com';
        $subject = 'Contact Request From Website';
        $headers = "From: ".$name." ".$surname."\nEmail:".$email."\nService: ".$service."\nPhone number:".$phonenumber. "\n\n".$message;
+       
        $send_email = mail($to,$subject,$headers);
 
-     //   echo ($send_email) ? 'success' : 'error';
+      // echo ($send_email) ? 'success' : 'error';
 
   }?> 
