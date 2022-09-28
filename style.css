@@ -20,6 +20,21 @@ background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
   background-position: center;
 }
 
+.content{
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 16px;
+  color: rgb(114, 112, 112);
+}
+
+.privacy-h1{
+  font-size: 28px;
+}
+
+.privacy-h2{
+  font-size: 24px;
+}
+
 .errow-up{
    position: fixed;
    width: 30px;
