@@ -14,7 +14,8 @@ html, body{
 }
 
 body{
-background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
+  /* overflow: hidden; */
+  background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
   background-size:cover;
   background-repeat:no-repeat;
   background-position: center;
@@ -1296,8 +1297,23 @@ margin-top: 0;
 .aboutus-section {
   /* margin-left: 100px; */
   padding: 90px 0;
+  align-items: center;
+  /* background-color: #1F4AB8; */
   margin-top: -50px;
 }
+
+.aboutus-section .container{
+  margin: auto;
+  /* background-color: red; */
+  /* padding-right: -30px; */
+}
+
+.aboutus-section .space{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .aboutus-title {
   font-size: 30px;
   letter-spacing: 0;
@@ -1392,7 +1408,27 @@ margin-top: 0;
   width: 70px;
 }
 
+.servi-bg1{
+  background-image: url(./images/pngwing.com\(7\).png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.servi-bg2{
+  background-image: url(./images/pngwing.com\(8\).png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 @media screen and (max-width:750px){
+
+  .aboutus-section .space{
+    display: unset;
+    justify-content: space-between;
+}
+
   .aboutus-section {
     margin-top: -200px;
     margin-bottom: -180px;
@@ -2107,6 +2143,7 @@ svg:nth-of-type(2) .graph-color{
   }
 
   #two-weeks{
+    display: none;
     text-align: center;
     margin: 8rem auto 4rem auto;
   }
@@ -2117,9 +2154,10 @@ svg:nth-of-type(2) .graph-color{
   }
 
   .two-weeks-text{
-    padding-top: 2rem;
-    width: 70%;
-    margin: auto;
+    /* padding-top: 1rem; */
+    /* font-size: 19px !important; */
+    /* width: 70%; */
+    /* margin: auto; */
   }
 
   .two-weeks-img{
@@ -2148,6 +2186,12 @@ svg:nth-of-type(2) .graph-color{
 
     .two-weeks-img{
       width: 100%;
+  }
+
+  #two-weeks{
+    display: block;
+    text-align: center;
+    margin: 8rem auto 4rem auto;
   }
   }
 
@@ -2195,41 +2239,128 @@ svg:nth-of-type(2) .graph-color{
   width: 100%;
 }
 
+.two-process{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-height: 600px;
+  margin-top: -80px;
+  margin-bottom: -80px;
+}
 
-/* tutorial */
-
-/* .codepen-info {
+.two-process .two-weeks { 
+  display: grid;
+  grid-template-columns: 4fr 1fr 4fr; 
+  grid-template-rows: 1fr 6fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
   max-width: 1000px;
+  width: 90%;
   margin: 0 auto;
-  padding: 20px 30px;
-  margin-top: 40px;
-  background: #f4f4f4;
-  margin-bottom: -100px;
-}
-.codepen-info h1 {
-  text-align: center;
-  margin-top: 0;
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 1.5em;
-}
-.codepen-info p {
-  color: #777;
-  font-size: 16px;
-}
-.codepen-info .src {
-  padding: 15px;
-  background: white;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-.codepen-info .src p.coded {
-  padding-left: 15px;
-  background: #f1f1f1;
-  color: black;
 }
 
-.tut-image{
+/* LEFT PART */
+.two-process .left { 
+  grid-area: 1 / 1 / 3 / 3;
+  border: 10px solid #8198ae62;
+  padding: 30px;
+  background-color: #FFFFFF;
+  position: relative;
+}
+.two-process .left h2{
+  text-transform: uppercase;
+  /* font-size: clamp(20px, 5vw ,40px); */
+  font-weight: 600;
+  font-size: 25px;
+  /* white-space: nowrap; */
+}
+.two-process .left h1 span{
+  color: #3362cb;
+}
+.two-process .left p{
+  margin-top: 20px;
+  /* margin-bottom: 50px; */
+  font-size: 18px;
+}
+.two-process .left a{
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #3362cb;
+  color: #000;
+  font-weight: 700;
+}
+.two-proces
+
+s .left a:hover{
+  color: #FFFFFF;
+  background-color: #3362cb;
+}
+
+
+/* RIGHT PART */
+.two-process .right { 
+  grid-area: 2 / 2 / 4 / 4;
+  border: 10px solid #8198ae62;
+  z-index: -1;
+  position: relative;
+}
+
+.two-process .right img{
   width: 100%;
-  height: 50px;
-} */
+  height: 100%;
+  object-fit: cover;
+}
+
+/* LEFT AND RIGHT BANDS */
+.left::before,
+.right::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 50%;
+  width: 50vw;
+  background: #8198ae62;
+}
+.left::before{
+  left: 0;
+  transform: translateY(-50%) translateX(-100%);
+}
+.right::before{
+  right: 0;
+  transform: translateY(-50%) translateX(100%); 
+  background-color: #8198ae62;
+}
+
+@media screen and (max-width: 450px){
+.two-process .two-weeks { 
+    grid-template-rows: 6fr 1fr 6fr;
+  }
+  .two-process .left{
+    grid-area: 1 / 1 / 3 / 4;
+  }
+  .two-process .right{
+    grid-area: 2 / 1 / 4 / 4
+  }
+}
+
+
+@media screen and (max-width:1500px){
+  .two-process{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 600px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  }
+
+  @media screen and (max-width:750px){
+    .two-process{
+      display: none;
+    }
+    }
