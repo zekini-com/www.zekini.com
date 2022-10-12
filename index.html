@@ -1045,7 +1045,18 @@ Symbols
           <input type="tel" name="phonenumber" placeholder="Phone number*" class="form__field form__text" required></input>
     </div>
           </div>
-  
+            <script src="https://www.google.com/recaptcha/api.js?render=6Ld3UHUiAAAAAMJZ7LRynZTYlimUBFNFQT-r4Lbn
+            "></script>
+              <script>
+                function onClick(e) {
+                  e.preventDefault();
+                  grecaptcha.ready(function() {
+                    grecaptcha.execute('6Ld3UHUiAAAAAMJZ7LRynZTYlimUBFNFQT-r4Lbn=', {action: 'submit'}).then(function(token) {
+                        // Add your logic to submit to your backend server here.
+                    });
+                  });
+                }
+            </script>
           <div class="form-group">
             <textarea type="text" name="message" placeholder="Your message*" class="form__field form__textarea" required></textarea>
             <button name="submit" class="btn btn--up btn--width" type="submit">Submit</button>
