@@ -37,6 +37,27 @@
     background: #198556;
     color: #fff;
   }
+
+    /* nav2 */
+    .nav2 a {
+      display: block;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      color: #333;
+    }
+    
+    .nav2 a:hover {
+      background: #1985564f;
+    }
+  
+  
+    .nav2 a.active {
+      font-weight: 700;
+      background: royalblue;
+      color: #fff;
+    }
+    
   
   .section-arti {
     padding: 0px 40px 40px 40px;

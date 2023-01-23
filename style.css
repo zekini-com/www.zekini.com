@@ -3,6 +3,7 @@
 @import url("./css/career.css");
 @import url("./css/article.css");
 @import url("./css/tut.css");
+@import url("./css/thankyou.css");
 /*Reset*/
 html, body{
   overflow-x: hidden;
@@ -1738,7 +1739,7 @@ margin-top: 0;
   background-color: #3362cb;
   position: relative;
   height: 25em;
-  background-image: url('./images/people/avator/4202847.png');
+  background-image: url('./images/people/avator/4202831.png');
 
   background-position: center;
   background-size: cover;
@@ -1757,6 +1758,59 @@ margin-top: 0;
   background-repeat: no-repeat;
   /* height: 100%; */
 }
+
+.team .box .image5 {
+  /* background-color: #999999; */
+  background-color: #878ef3;
+  position: relative;
+  height: 25em;
+  background-image: url('./images/people/avator/4202846.png');
+  /* background-color: red; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100%; */
+}
+
+.team .box .image6 {
+  /* background-color: #999999; */
+  background-color: #455a64;
+  position: relative;
+  height: 25em;
+  background-image: url('./images/people/avator/4202845.png');
+  /* background-color: red; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100%; */
+}
+
+.team .box .image7 {
+  /* background-color: #999999; */
+  background-color: #8198ae;
+  position: relative;
+  height: 25em;
+  background-image: url('./images/people/avator/4202836.png');
+  /* background-color: red; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100%; */
+}
+
+.team .box .image8 {
+  /* background-color: #999999; */
+  background-color: gray;
+  position: relative;
+  height: 25em;
+  background-image: url('./images/people/avator/robotics.png');
+  /* background-color: red; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100%; */
+}
+
 
 .team .overlay {
   position: absolute;
